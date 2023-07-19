@@ -1,0 +1,8 @@
+respawnOnStart = -1;
+enableDebugConsole[] = {"76561198057067491"};
+
+class CfgFunctions 
+{
+	createShortcuts = 1;
+	#include "functions\cfgWSOTFunctions.hpp"
+};
