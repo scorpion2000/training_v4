@@ -1,6 +1,6 @@
 params ["_controller", "_type"];
 
-_factionFile = format ["scripts\factions\%1.sqf", _type];
+_factionFile = format ["scripts\factions\units\%1.sqf", _type];
 
 _factionData = [] call compile preprocessFileLineNumbers _factionFile;
 

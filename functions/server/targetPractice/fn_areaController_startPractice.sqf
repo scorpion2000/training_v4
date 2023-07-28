@@ -16,8 +16,9 @@ _targets = _trigger getVariable ["targets", []];
 {
 	_x setvariable ["nopop", true, true];
 	_x animate ["terc", 1];
-	_x setVariable ["practice_isHit", true, true];
+	_x setVariable ["practice_isHit", true];
 	_x addEventHandler ["Hit", {
+		(_this select 0) setVariable ["practice_isHit", true];
 		[
 			((_this select 0) getVariable ["parentTrigger", objNull]), 
 			(_this select 0)

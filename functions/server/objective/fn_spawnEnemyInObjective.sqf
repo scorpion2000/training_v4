@@ -6,6 +6,8 @@ _unarmed =_controller setVariable ["enemy_unarmed", []];
 
 _trigger = missionNamespace getVariable [[_controller getVariable ["objectiveName",""], "trigger"] joinString "_", objNull];
 
+if (isNull _trigger) exitWith {systemChat "humungus fucking error"};
+
 _specialSpawnChance = 10;
 _unarmedSpawnChance = 1;
 

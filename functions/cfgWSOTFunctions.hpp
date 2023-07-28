@@ -36,6 +36,50 @@ class WSOTFunctions {
 		class removeEnemyFromObjective;
 	};
 
+	class WSOT_Server_AtRange
+	{
+		file = "functions\server\atRange";
+
+		class rangeControllerSetup;
+		class rangeTriggerSetup;
+		class setRangeEnemyType;
+		class vehicleSelection;
+		class generateVehicle;
+		class displayVehicleDamage;
+		class registerDamageBoards;
+		class deleteVehicles;
+	};
+
+	class WSOT_Server_CreateStatics
+	{
+		file = "functions\server\createStatics";
+
+		class registerStaticPlacement;
+		class staticController;
+	};
+
+	class WSOT_Client_StaticsAddAceActions
+	{
+		file = "functions\client\createStatics";
+
+		class staticsAddAceActions;
+	};
+
+	class WSOT_Server_CreateVehicles
+	{
+		file = "functions\server\createVehicles";
+
+		class vehicleController;
+		class vehicleTriggerSetup;
+	};
+
+	class WSOT_Client_VehiclesAddAceActions
+	{
+		file = "functions\client\createVehicles";
+
+		class vehicleAddAceActions;
+	};
+
 	class WSOT_Client
 	{
 		file = "functions\client";

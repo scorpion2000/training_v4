@@ -8,9 +8,9 @@ _trigger setVariable ["practice_isRunning", false];
 _targets = _trigger getVariable ["targets", []];
 
 {
+	_x removeAllEventHandlers "Hit";
 	_x setvariable ["nopop", false];
 	_x animate ["terc", 0];
-	_x removeAllEventHandlers "Hit";
 } forEach _targets;
 
 [

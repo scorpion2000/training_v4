@@ -84,11 +84,6 @@ wsot_objectiveWelcome = [
 	"Objective Settings"
 ];
 
-wsot_objectiveSelectCSAT = [
-	"CSAT Ellenfél Választása",
-	"Select CSAT As Enemy"
-];
-
 wsot_objectiveSpawnEnemy = [
 	"Ellenfelek Generálása",
 	"Generate Hostiles"
@@ -97,4 +92,44 @@ wsot_objectiveSpawnEnemy = [
 wsot_objectiveRemoveEnemy = [
 	"Ellenfelek Törlése",
 	"Remove Hostiles"
+];
+
+wsot_rangeGenerateCar = [
+	"Autó generálása",
+	"Generate Car"
+];
+
+wsot_rangeGenerateAPC = [
+	"APC generálása",
+	"Generate Car"
+];
+
+wsot_rangeGenerateTank = [
+	"Tank generálása",
+	"Generate Tank"
+];
+
+wsot_rangeSelectVehicle = [
+	"Válassz Járművet",
+	"Select Vehicle"
+];
+
+wsot_rangeExit = [
+	"Kilépés",
+	"Exit"
+];
+
+wsot_removeAllVehicles = [
+	"Minden jármű törlése",
+	"Delete all vehicles"
+];
+
+wsot_selectFaction = [
+	"Frakció Választása",
+	"Faction Select"
+];
+
+wsot_useAceMenu = [
+	"Használd az ACE Interakció Menüt!",
+	"Use the ACE Interactions Menu!"
 ];

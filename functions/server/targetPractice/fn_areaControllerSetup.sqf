@@ -1,4 +1,4 @@
-params ["_controller", "_controlGroup"];
+params ["_controller", "_controlGroup", ["_firstTime", false]];
 
 [_controller] remoteExec ["removeAllActions", 0, false];
 _controller setObjectTextureGlobal [0, "images\wsot_flag.paa"];
@@ -16,28 +16,28 @@ _popupToggleText = format ["<t color='#ff5733'>%1</t>", (wsot_controllerDisableP
 _targetResetText = format ["<t color='#ff5733'>%1</t>", (wsot_controllerResetTargets select wsot_preferedLanguage)];
 _targetPracticeSetup = format ["<t color='#20c781'>%1</t>", (wsot_controllerTargetPracticeSetup select wsot_preferedLanguage)];
 
-[_controller, [_welcomeText, {}, nil, 1, true, false, "", "true", 8, false, "", ""]] remoteExec ["addAction", 0, true];
+[_controller, [_welcomeText, {}, nil, 1, true, false, "", "true", 8, false, "", ""]] remoteExec ["addAction", 0, _firstTime];
 [_controller, [_resetText, {
 	[(_this select 0), ""] remoteExec ["wsot_fnc_areaControllerSetup", 2, false];
-}, nil, 1, true, false, "", "true", 8, false, "", ""]] remoteExec ["addAction", 0, true];
+}, nil, 1, true, false, "", "true", 8, false, "", ""]] remoteExec ["addAction", 0, _firstTime];
 
-[_controller, [_dividerText, {}, nil, 1, true, false, "", "true", 8, false, "", ""]] remoteExec ["addAction", 0, true];
+[_controller, [_dividerText, {}, nil, 1, true, false, "", "true", 8, false, "", ""]] remoteExec ["addAction", 0, _firstTime];
 
 [_controller, [_popupToggleText, {
 	_trigger = missionNamespace getVariable [[(_this select 0) getVariable ["controlGroup", ""], "trigger"] joinString "_", objNull];
 	if (_trigger != objNull) then {
 		[_trigger] remoteExec ["wsot_fnc_toggleTargetPopups", 2, false];
 	};
-}, nil, 1, true, true, "", "true", 8, false, "", ""]] remoteExec ["addAction", 0, true];
+}, nil, 1, true, true, "", "true", 8, false, "", ""]] remoteExec ["addAction", 0, _firstTime];
 [_controller, [_targetResetText, {
 	_trigger = missionNamespace getVariable [[(_this select 0) getVariable ["controlGroup", ""], "trigger"] joinString "_", objNull];
 	if (_trigger != objNull) then {
 		[_trigger] remoteExec ["wsot_fnc_resetTargets", 2, false];
 	};
-}, nil, 1, true, true, "", "true", 8, false, "", ""]] remoteExec ["addAction", 0, true];
+}, nil, 1, true, true, "", "true", 8, false, "", ""]] remoteExec ["addAction", 0, _firstTime];
 
-[_controller, [_dividerText, {}, nil, 1, true, false, "", "true", 8, false, "", ""]] remoteExec ["addAction", 0, true];
+[_controller, [_dividerText, {}, nil, 1, true, false, "", "true", 8, false, "", ""]] remoteExec ["addAction", 0, _firstTime];
 
 [_controller, [_targetPracticeSetup, {
 	[(_this select 0)] remoteExec ["wsot_fnc_areaController_practiceSetup", 2, false];
-}, nil, 1, true, false, "", "true", 8, false, "", ""]] remoteExec ["addAction", 0, true];
+}, nil, 1, true, false, "", "true", 8, false, "", ""]] remoteExec ["addAction", 0, _firstTime];

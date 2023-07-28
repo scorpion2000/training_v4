@@ -1,0 +1,7 @@
+/*	Add your faction to the array below	*/
+/*	NOTE: FACTION NAME MUST MATCH FILE NAME	*/
+
+wsot_allFactionsArray = [
+	"csat",
+	"russia"
+];

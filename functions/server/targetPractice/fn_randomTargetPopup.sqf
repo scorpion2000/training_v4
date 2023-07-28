@@ -11,9 +11,9 @@ while {!_foundHitTarget} do {
 	};
 };
 
+_target setVariable ["practice_isHit", false];
+_target animate ["terc", 0];
+
 if (_previousTarget != objNull) then {
 	_previousTarget setVariable ["practice_isHit", true];
 };
-
-_target setVariable ["practice_isHit", false];
-_target animate ["terc", 0];
