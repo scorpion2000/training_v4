@@ -184,6 +184,15 @@ class WSOTFunctions {
 		class changeWeather;
 	};
 
+	class WSOT_Server_EODRange
+	{
+		file = "functions\server\eodRange";
+
+		class eodController;
+		class eodTriggerSetup;
+		class generateMines;
+	};
+
 	class WSOT_Client
 	{
 		file = "functions\client";

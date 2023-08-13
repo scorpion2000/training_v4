@@ -176,4 +176,7 @@
 [hr_t_1, "hr1"] remoteExec ["wsot_fnc_helicopterTriggerSetup", 2, false];
 [hr_t_2, "hr2"] remoteExec ["wsot_fnc_helicopterTriggerSetup", 2, false];
 
+[drr1_c, "drr1", true] remoteExec ["wsot_fnc_eodController", 2, false];
+[drr1_T, "drr1"] remoteExec ["wsot_fnc_eodTriggerSetup", 2, false];
+
 //I'll be honest, this was a bad idea

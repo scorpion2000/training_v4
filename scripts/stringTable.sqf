@@ -248,3 +248,13 @@ wsot_weatherFogHigh = [
 	"Magas Köd",
 	"High Fog"
 ];
+
+wsot_eodApMineGen = [
+	"AP Aknák Generálása (10)",
+	"Generate AP Mines (10)"
+];
+
+wsot_eodAtMineGen = [
+	"AT Aknák Generálása (10)",
+	"Generate AT Mines (10)"
+];
