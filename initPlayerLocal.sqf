@@ -7,3 +7,4 @@ if !(count ([] call acre_api_fnc_getCurrentRadioList) <= 0) then {
 };
 
 [] execVM "scripts\createAceStaticActions.sqf";
+[] execVM "scripts\mapHideIcon.sqf"

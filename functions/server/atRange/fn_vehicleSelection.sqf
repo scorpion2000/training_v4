@@ -1,9 +1,8 @@
 params ["_controller", "_selection"];
 
 _vehicles = [];
-_validSelection = true;
 
-switch (_selection) do {
+/*switch (_selection) do {
 	case "car": {
 		_vehicles = +(_controller getVariable ["enemy_car", []]);
 	};
@@ -15,9 +14,15 @@ switch (_selection) do {
 	};
 	
 	default { _validSelection = false };
-};
+};*/
 
-if (!_validSelection) exitWith { [_controller, ""] remoteExec ["wsot_fnc_rangeControllerSetup", 2, false] };
+_faction = _controller getVariable ["thisFaction", "csat"];
+_allVehicles = [] call compile preprocessFileLineNumbers (format ["scripts\vehicles\%1.sqf", _faction]);
+{
+	_groupName = ((_x select 0) select 1);
+	if (_groupName == _selection) then {_vehicles = _x; break;};
+} forEach _allVehicles;
+
 [_controller] remoteExec ["removeAllActions", 0, false];
 
 _welcomeText = format ["<t color='#f4c430'>%1</t>", (wsot_rangeSelectVehicle select wsot_preferedLanguage)];
@@ -28,6 +33,7 @@ _exitText = format ["<t color='#20c781'>%1</t>", (wsot_rangeExit select wsot_pre
 [_controller, [_dividerText, {}, nil, 1, true, false, "", "true", 8, false, "", ""]] remoteExec ["addAction", 0, false];
 
 {
+	if (_foreachIndex == 0) then {continue};
 	_name = format ["<t color='#1ad620'>%1</t>", _x select 0];
 	[_controller, [_name, {
 		[(_this select 0), (_this select 3)] remoteExec ["wsot_fnc_generateVehicle", 2, false];
@@ -36,5 +42,5 @@ _exitText = format ["<t color='#20c781'>%1</t>", (wsot_rangeExit select wsot_pre
 
 [_controller, [_dividerText, {}, nil, 1, true, false, "", "true", 8, false, "", ""]] remoteExec ["addAction", 0, false];
 [_controller, [_exitText, {
-	[(_this select 0), ""] remoteExec ["wsot_fnc_rangeControllerSetup", 2, false];
-}, nil, 1, true, false, "", "true", 8, false, "", ""]] remoteExec ["addAction", 0, false];
+	[(_this select 0), "", (_this select 3)] remoteExec ["wsot_fnc_rangeControllerSetup", 2, false];
+}, _faction, 1, true, false, "", "true", 8, false, "", ""]] remoteExec ["addAction", 0, false];

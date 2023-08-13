@@ -42,12 +42,17 @@
 [asr_c, "asr", true] remoteExec ["wsot_fnc_areaControllerSetup", 2, false];
 [asr_t, "asr"] remoteExec ["wsot_fnc_targetTriggerSetup", 2, false];
 
-[rb2_c_1, "rb2", true] remoteExec ["wsot_fnc_rangeControllerSetup", 2, false];
-[rb2_c_2, "rb2", true] remoteExec ["wsot_fnc_rangeControllerSetup", 2, false];
-[rb2_c_3, "rb2", true] remoteExec ["wsot_fnc_rangeControllerSetup", 2, false];
-[rb2_c_4, "rb2", true] remoteExec ["wsot_fnc_rangeControllerSetup", 2, false];
+[rb2_c_1, "rb2", "csat", objNull, true] remoteExec ["wsot_fnc_rangeControllerSetup", 2, false];
+[rb2_c_2, "rb2", "csat", objNull, true] remoteExec ["wsot_fnc_rangeControllerSetup", 2, false];
+[rb2_c_3, "rb2", "csat", objNull, true] remoteExec ["wsot_fnc_rangeControllerSetup", 2, false];
+[rb2_c_4, "rb2", "csat", objNull, true] remoteExec ["wsot_fnc_rangeControllerSetup", 2, false];
 [rb2_t, "rb2"] remoteExec ["wsot_fnc_rangeTriggerSetup", 2, false];
 [[rb2_db_1, rb2_db_2, rb2_db_3, rb2_db_4], rb2_t] remoteExec ["wsot_fnc_registerDamageBoards", 2, false];
+
+[ra2_c_1, "ra2", "csat", objNull, true] remoteExec ["wsot_fnc_rangeControllerSetup", 2, false];
+[ra2_c_2, "ra2", "csat", objNull, true] remoteExec ["wsot_fnc_rangeControllerSetup", 2, false];
+[ra2_t, "ra2"] remoteExec ["wsot_fnc_rangeTriggerSetup", 2, false];
+[[ra2_db_1, ra2_db_2, ra2_db_3, ra2_db_4], ra2_t] remoteExec ["wsot_fnc_registerDamageBoards", 2, false];
 
 [objective_t_alpha, "objective_alpha"] remoteExec ["wsot_fnc_objectiveTriggerSetup", 2, false];
 [objective_t_bravo, "objective_bravo"] remoteExec ["wsot_fnc_objectiveTriggerSetup", 2, false];
@@ -113,6 +118,9 @@
 [vr_c_14, "vr14", true] remoteExec ["wsot_fnc_vehicleController", 2, false];
 [vr_c_15, "vr15", true] remoteExec ["wsot_fnc_vehicleController", 2, false];
 [vr_c_16, "vr16", true] remoteExec ["wsot_fnc_vehicleController", 2, false];
+[vr_c_17, "vr17", true] remoteExec ["wsot_fnc_vehicleController", 2, false];
+[vr_c_18, "vr1", true] remoteExec ["wsot_fnc_vehicleController", 2, false];
+[vr_c_19, "vr18", true] remoteExec ["wsot_fnc_vehicleController", 2, false];
 [vr_t_1, "vr1"] remoteExec ["wsot_fnc_vehicleTriggerSetup", 2, false];
 [vr_t_2, "vr2"] remoteExec ["wsot_fnc_vehicleTriggerSetup", 2, false];
 [vr_t_3, "vr3"] remoteExec ["wsot_fnc_vehicleTriggerSetup", 2, false];
@@ -129,3 +137,43 @@
 [vr_t_14, "vr14"] remoteExec ["wsot_fnc_vehicleTriggerSetup", 2, false];
 [vr_t_15, "vr15"] remoteExec ["wsot_fnc_vehicleTriggerSetup", 2, false];
 [vr_t_16, "vr16"] remoteExec ["wsot_fnc_vehicleTriggerSetup", 2, false];
+[vr_t_17, "vr17"] remoteExec ["wsot_fnc_vehicleTriggerSetup", 2, false];
+[vr_t_18, "vr18"] remoteExec ["wsot_fnc_vehicleTriggerSetup", 2, false];
+
+[ar_c_1, "ar1", true] remoteExec ["wsot_fnc_artilleryController", 2, false];
+[ar_c_2, "ar2", true] remoteExec ["wsot_fnc_artilleryController", 2, false];
+[ar_c_3, "ar3", true] remoteExec ["wsot_fnc_artilleryController", 2, false];
+[ar_c_4, "ar4", true] remoteExec ["wsot_fnc_artilleryController", 2, false];
+[ar_c_5, "ar5", true] remoteExec ["wsot_fnc_artilleryController", 2, false];
+[ar_c_6, "ar6", true] remoteExec ["wsot_fnc_artilleryController", 2, false];
+[ar_pos_1, "ar1"] remoteExec ["wsot_fnc_registerArtilleryPosition", 2, false];
+[ar_pos_2, "ar2"] remoteExec ["wsot_fnc_registerArtilleryPosition", 2, false];
+[ar_pos_3, "ar3"] remoteExec ["wsot_fnc_registerArtilleryPosition", 2, false];
+[ar_pos_4, "ar4"] remoteExec ["wsot_fnc_registerArtilleryPosition", 2, false];
+[ar_pos_5, "ar5"] remoteExec ["wsot_fnc_registerArtilleryPosition", 2, false];
+[ar_pos_6, "ar6"] remoteExec ["wsot_fnc_registerArtilleryPosition", 2, false];
+[ar_t_1, "far"] remoteExec ["wsot_fnc_registerImpactZone", 2, false];
+[ar_t_2, "far"] remoteExec ["wsot_fnc_registerImpactZone", 2, false];
+[ar_t_3, "far"] remoteExec ["wsot_fnc_registerImpactZone", 2, false];
+[ar_t_4, "far"] remoteExec ["wsot_fnc_registerImpactZone", 2, false];
+[ar_t_5, "far"] remoteExec ["wsot_fnc_registerImpactZone", 2, false];
+[ar_t_6, "far"] remoteExec ["wsot_fnc_registerImpactZone", 2, false];
+[ar_t_7, "far"] remoteExec ["wsot_fnc_registerImpactZone", 2, false];
+[ar_t_8, "far"] remoteExec ["wsot_fnc_registerImpactZone", 2, false];
+[ar_t_9, "close"] remoteExec ["wsot_fnc_registerImpactZone", 2, false];
+[ar_t_10, "close"] remoteExec ["wsot_fnc_registerImpactZone", 2, false];
+[ar_t_11, "close"] remoteExec ["wsot_fnc_registerImpactZone", 2, false];
+[ar_t_12, "close"] remoteExec ["wsot_fnc_registerImpactZone", 2, false];
+[ar_t_13, "close"] remoteExec ["wsot_fnc_registerImpactZone", 2, false];
+[ar_t_14, "close"] remoteExec ["wsot_fnc_registerImpactZone", 2, false];
+[ar_d_1, "ar1"] remoteExec ["wsot_fnc_artilleryRegisterDisplay", 2, false];
+[ar_d_2, "ar2"] remoteExec ["wsot_fnc_artilleryRegisterDisplay", 2, false];
+[ar_d_3, "ar3"] remoteExec ["wsot_fnc_artilleryRegisterDisplay", 2, false];
+[ar_d_4, "ar4"] remoteExec ["wsot_fnc_artilleryRegisterDisplay", 2, false];
+[ar_d_5, "ar5"] remoteExec ["wsot_fnc_artilleryRegisterDisplay", 2, false];
+[ar_d_6, "ar6"] remoteExec ["wsot_fnc_artilleryRegisterDisplay", 2, false];
+
+[hr_t_1, "hr1"] remoteExec ["wsot_fnc_helicopterTriggerSetup", 2, false];
+[hr_t_2, "hr2"] remoteExec ["wsot_fnc_helicopterTriggerSetup", 2, false];
+
+//I'll be honest, this was a bad idea

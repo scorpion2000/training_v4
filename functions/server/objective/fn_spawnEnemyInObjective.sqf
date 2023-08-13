@@ -1,4 +1,4 @@
-params ["_controller"];
+params ["_controller", "_callingPlayer"];
 
 _regulars = _controller getVariable ["enemy_regulars", []];
 _special =_controller setVariable ["enemy_special", []];
@@ -33,12 +33,13 @@ while {_regularsInBuildings > 0} do {
 	_building = selectRandom _buildingsToUse;
 	_buildingsToUse deleteAt (_buildingsToUse find _building);
 
-	_group = createGroup EAST;
+	_group = createGroup INDEPENDENT;
 
 	for "_i" from 1 to (random [1, 2, 4]) do {
 		_position = selectRandom (_building buildingPos -1);
-		_unit = _group createUnit [selectRandom _regulars, _position, [], 0, "CAN_COLLIDE"];
+		_unit = _group createUnit [selectRandom _regulars, _position, [], 0, "NONE"];
 
+		[_unit] joinSilent _group;	//workaround
 		_unit disableAI "PATH";
 		_unit setUnitPos "AUTO";
 
@@ -52,11 +53,12 @@ while {_regularsInBuildings > 0} do {
 };
 
 while {_regularsStatic > 0} do {
-	_group = createGroup EAST;
+	_group = createGroup INDEPENDENT;
 
 	_position = selectRandom _statics;
-	_unit = _group createUnit [selectRandom _regulars, _position, [], 0, "CAN_COLLIDE"];
+	_unit = _group createUnit [selectRandom _regulars, _position, [], 0, "NONE"];
 
+	[_unit] joinSilent _group;	//workaround
 	_unit disableAI "PATH";
 	_unit setUnitPos "AUTO";
 
@@ -67,12 +69,13 @@ while {_regularsStatic > 0} do {
 };
 
 while {_regularOnPatrol > 0} do {
-	_group = createGroup EAST;
+	_group = createGroup INDEPENDENT;
 
 	for "_i" from 1 to (random [1, 2, 4]) do {
 		_position = selectRandom _waypoints;
-		_unit = _group createUnit [selectRandom _regulars, _position, [], 3, "CAN_COLLIDE"];
+		_unit = _group createUnit [selectRandom _regulars, _position, [], 3, "NONE"];
 
+		[_unit] joinSilent _group;	//workaround
 		_unit setUnitPos "AUTO";
 
 		_regularOnPatrol = _regularOnPatrol - 1;
@@ -103,3 +106,11 @@ while {_regularOnPatrol > 0} do {
 _currentGroups = _trigger getVariable ["spawnedGroups", []];
 _currentGroups append _allGroups;
 _trigger setVariable ["spawnedGroups", _currentGroups];
+
+if (isNull _callingPlayer) exitWith {}; 
+[
+	(format ["%1 %2", 
+		count _allGroups,
+		wsot_objectiveSpawnedSideWarn select wsot_preferedLanguage
+	])
+] remoteExec ["hint", (owner _callingPlayer), false];

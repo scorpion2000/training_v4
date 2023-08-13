@@ -49,8 +49,8 @@ _artillery = [
 _tank = [
 	["tank", "Tanks"],
 	["T100 Black Eagle", "O_MBT_02_cannon_F"],
-	["T-14 Armata", "O_MBT_04_cannon_F"],
-	["T-14K Armata", "O_MBT_04_command_F"]
+	["T-14 Angara (DLC)", "O_MBT_04_cannon_F"],
+	["T-14K Angara (DLC)", "O_MBT_04_command_F"]
 ];
 
 _return = [_car, _truck, _mrap, _apc, _ifv, _antiAir, _artillery, _tank];

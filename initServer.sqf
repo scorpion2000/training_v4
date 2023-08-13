@@ -1,5 +1,11 @@
 wsot_preferedLanguage = 0;
+wsot_changingWeather = false;
 
 [] call compile preprocessFileLineNumbers "scripts\stringTable.sqf";	//Server has to wait for this
 [] execVM "scripts\factions\allFactions.sqf";
 [] execVM "scripts\objectSetups.sqf";
+[] execVM "scripts\createUAVTargets.sqf";
+[] execVM "scripts\createVehicleTargets.sqf";
+
+[(selectRandom ["clear", "cloudy", "rainy", "stormy"])] call wsot_fnc_changeWeather;
+[6 + round (random 6)] call wsot_fnc_changeTime;

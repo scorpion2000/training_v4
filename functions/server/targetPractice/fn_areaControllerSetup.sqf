@@ -1,7 +1,17 @@
 params ["_controller", "_controlGroup", ["_firstTime", false]];
 
+//I can't be arsed to change all the controllers
+if (_firstTime && typeOf _controller != "Land_Laptop_03_black_F") then {
+	_atlPos = getPosAtl _controller;
+	_dir = getDir _controller;
+	deleteVehicle _controller;
+	_controller = createVehicle ["Land_Laptop_03_black_F", [0,0,0], [], 0, "CAN_COLLIDE"];
+	_controller setPosATL _atlPos;
+	_controller setDir _dir + 180;
+};
+
 [_controller] remoteExec ["removeAllActions", 0, false];
-_controller setObjectTextureGlobal [0, "images\wsot_flag.paa"];
+_controller setObjectTextureGlobal [1, "images\shooting_range.paa"];
 
 if (_controlGroup != "") then {
 	_controller setVariable ["controlGroup", _controlGroup];

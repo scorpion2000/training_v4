@@ -13,6 +13,7 @@ _vehicle setDir (random 360);
 _vehicle addEventHandler ["Hit", { 
 	[_this select 0] remoteExec ["wsot_fnc_displayVehicleDamage", 2, false];
 }];
+_vehicle engineOn true;
 
 _allVehicles pushBack _vehicle;
 _trigger setVariable ["allVehicles", _allVehicles];

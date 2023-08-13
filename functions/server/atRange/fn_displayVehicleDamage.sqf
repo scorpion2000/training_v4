@@ -56,6 +56,12 @@ _string = format ["Full Health: %1%2\nPart Damage:", round (100 - (damage _vehic
 
 	if (_x find "hitfuel" != -1) then {
 		_hitString = "Fuel";
+		if (_x find "left" != -1) then {
+			_hitString = "Fuel Left";
+		};
+		if (_x find "right" != -1) then {
+			_hitString = "Fuel Right";
+		};
 		_health = format ["%1%2", round (100 - (((_hp select 2) select _foreachindex) * 100)), "%"];
 		_s = [_hitString, _health] joinString " - ";
 		_string = [_string, _s] joinString "\n";

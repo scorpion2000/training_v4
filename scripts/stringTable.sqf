@@ -10,8 +10,8 @@ wsot_reset = [
 ];
 
 wsot_controllerWelcome = [
-	"Kontroller Beállítások",
-	"Controller Settings"
+	"Vezérlő",
+	"Controller"
 ];
 
 wsot_controllerDivider = [
@@ -79,6 +79,11 @@ wsot_practiceTargetsHit = [
 	"Targets Hit"
 ];
 
+wsot_practiceStarting = [
+	"Gyakorlat Rögzítve!",
+	"Staring Practice"
+];
+
 wsot_objectiveWelcome = [
 	"Célterület Beállítások",
 	"Objective Settings"
@@ -92,6 +97,16 @@ wsot_objectiveSpawnEnemy = [
 wsot_objectiveRemoveEnemy = [
 	"Ellenfelek Törlése",
 	"Remove Hostiles"
+];
+
+wsot_objectiveSpawnedSideWarn = [
+	"csoport legenerálódott az INDEPENDENT oldalon!",
+	"groups generated on INDEPENDENT side"
+];
+
+wsot_objectiveWarnSideChange = [
+	"csoport átkerült OPFOR oldalra!",
+	"groups switched to OPFOR side!"
 ];
 
 wsot_rangeGenerateCar = [
@@ -132,4 +147,104 @@ wsot_selectFaction = [
 wsot_useAceMenu = [
 	"Használd az ACE Interakció Menüt!",
 	"Use the ACE Interactions Menu!"
+];
+
+wsot_artySelectSmall1 = [
+	"Mk 6 Mortar választása",
+	"Select Mk 6 Mortar"
+];
+
+wsot_artySelectSmall2 = [
+	"M252 választása",
+	"Select M252"
+];
+
+wsot_artySelectLarge = [
+	"M119A2 választása",
+	"Select M119A2"
+];
+
+wsot_artySelectMover = [
+	"M109A6 választása",
+	"Select M109A6"
+];
+
+wsot_artyCreateTargetClose = [
+	"Közeli Célpont Generálása",
+	"Generate Close Target"
+];
+
+wsot_artyCreateTargetFar = [
+	"Távoli Célpont Generálása",
+	"Generate Distant Target"
+];
+
+wsot_objectiveGenerateVIP = [
+	"VIP Menekítő Feladat Generálása",
+	"Generate VIP Rescue Mission"
+];
+
+wsot_objectiveGenerateRadar = [
+	"Radar Lekapcsolás Feladat Generálása",
+	"Generate Disable Radar Mission"
+];
+
+wsot_objectiveRemoveMission = [
+	"Feladat Törlése",
+	"Delete Mission"
+];
+
+wsot_objectiveActivateObjective = [
+	"Ellenfelek Ellenségessé Állítása",
+	"Set Enemies To Hostile"
+];
+
+wsot_factionSelectedText = [
+	"frakció kiválasztva!",
+	"faction selected!"
+];
+
+wsot_planesDeletePlane = [
+	"Repülő törlése",
+	"Delete plane"
+];
+
+wsot_weatherClear = [
+	"Tiszta idő",
+	"Clear Weather"
+];
+
+wsot_weatherCloudy = [
+	"Felhős idő",
+	"Cloudy Weather"
+];
+
+wsot_weatherRainy = [
+	"Esős idő",
+	"Rainy Weather"
+];
+
+wsot_weatherStormy = [
+	"Viharos idő",
+	"Stormy Weather"
+];
+
+wsot_weatherFogNone = [
+	"Köd Eltűntetése",
+	"Remove Fog"
+];
+
+wsot_weatherFogSmall = [
+	"Alacsony Köd",
+	"Low Fog"
+];
+
+wsot_weatherFogMid = [
+	"Közepes Köd",
+	"Mid Fog"
+];
+
+wsot_weatherFogHigh = [
+	"Magas Köd",
+	"High Fog"
 ];

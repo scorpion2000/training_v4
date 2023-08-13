@@ -1,9 +1,11 @@
 class WSOTFunctions {
 	tag = "WSOT";
 
-	class WSOT_Utils
+	class WSOT_ServerUtils
 	{
-		file = "functions";
+		file = "functions\server";
+
+		class reportDamage;
 	};
 
 	class WSOT_Server_TargetPractice
@@ -34,6 +36,13 @@ class WSOTFunctions {
 		class setObjectiveEnemyType;
 		class spawnEnemyInObjective;
 		class removeEnemyFromObjective;
+		class registerObjectiveDisplay;
+		class updateObjectiveDisplays;
+		class waitForObjectiveCompletion;
+		class objectiveGenerateRadar;
+		class objectiveGenerateVip;
+		class removeObjective;
+		class activateArea;
 	};
 
 	class WSOT_Server_AtRange
@@ -78,6 +87,101 @@ class WSOTFunctions {
 		file = "functions\client\createVehicles";
 
 		class vehicleAddAceActions;
+	};
+
+	class WSOT_Server_ServerArtilleryRange
+	{
+		file = "functions\server\artilleryRange";
+
+		class createArtillery;
+		class artilleryController;
+		class registerArtilleryPosition;
+		class createTarget;
+		class registerImpactZone;
+		class artilleryRegisterDisplay;
+		class artilleryUpdateDisplay;
+	};
+
+	class WSOT_Server_ClientArtilleryRange
+	{
+		file = "functions\client\artilleryRange";
+
+		class prepareTarget;
+	};
+
+	class WSOT_Server_ServerLoadouts
+	{
+		file = "functions\server\loadouts";
+
+		class registerLoadout;
+		class loadoutController;
+	};
+
+	class WSOT_Server_ClientLoadouts
+	{
+		file = "functions\client\loadouts";
+
+		class loadoutsAddAceActions;
+	};
+
+	class WSOT_Server_ServerCreateHelicopter
+	{
+		file = "functions\server\createHelicopters";
+
+		class helicopterTriggerSetup;
+		class helicopterController;
+	};
+
+	class WSOT_Server_ClientCreateHelicopter
+	{
+		file = "functions\client\createHelicopters";
+
+		class helicoptersAddAceActions;
+	};
+
+	class WSOT_Server_ClientTeleportFlags
+	{
+		file = "functions\client\teleportFlags";
+
+		class tpFlagcreateActions;
+	};
+
+	class WSOT_Server_ClientTeleportPoles
+	{
+		file = "functions\client\teleportPoles";
+
+		class tpPoleCreateActions;
+	};
+
+	class WSOT_Server_ServerCreatePlanes
+	{
+		file = "functions\server\createPlanes";
+
+		class planesRegisterSpawnPoint;
+		class planesController;
+	};
+
+	class WSOT_Server_ClientCreatePlanes
+	{
+		file = "functions\client\createPlanes";
+
+		class planesAddAceActions;
+	};
+
+	class WSOT_Server_TimeDial
+	{
+		file = "functions\server\timeDial";
+
+		class timeDialController;
+		class changeTime;
+	};
+
+	class WSOT_Server_WeatherDial
+	{
+		file = "functions\server\weatherDial";
+
+		class weatherController;
+		class changeWeather;
 	};
 
 	class WSOT_Client

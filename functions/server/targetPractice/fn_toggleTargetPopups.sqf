@@ -1,6 +1,7 @@
 params ["_trigger"];
 
 _targets = _trigger getVariable ["targets", []];
+systemChat str count _targets;
 {
 	if (_x getVariable ["nopop", true]) then {
 		_x setvariable ["nopop", false];

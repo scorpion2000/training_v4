@@ -1,16 +1,17 @@
 params ["_controllers"];
 
-_factions = ["nato", "csat"];
+_factions = ["nato", "csat", "usa", "russia"];
 _vehicleGroup = "";
 
 {
 	_faction = _x;
-	_vehicleGroups = [] call compile preprocessFileLineNumbers (format ["scripts\vehicles\%1.sqf", _faction]);
 	_action = [_faction, _faction, "", {}, {true}] call ace_interact_menu_fnc_createAction;
 	{
 		[_x, 0, ["ACE_MainActions"], _action] call ace_interact_menu_fnc_addActionToObject;
 	} forEach _controllers;
 
+	
+	_vehicleGroups = [] call compile preprocessFileLineNumbers (format ["scripts\vehicles\%1.sqf", _faction]);
 	{
 		_vehicles = _x;
 		{
@@ -22,17 +23,18 @@ _vehicleGroup = "";
 					[_x, 0, ["ACE_MainActions", _faction], _action] call ace_interact_menu_fnc_addActionToObject;
 				} forEach _controllers;
 			} else {
-				_name = (_x select 0);
 				_className = (_x select 1);
+				_name = getText (configFile >> "CfgVehicles" >> _classname >> "displayName");
 				_action = [_className, _name, "", {
 					params ["_target", "_player", "_params"];
 					_trigger = missionNamespace getVariable [[(_target getVariable ["controlGroup", ""]),"trigger"] joinString "_", objNull];
 					_positions = _trigger getVariable ["spawnPositions", []];
+					_sortedPositions = [_positions, [], {_x distance _player}, "ASCEND"] call BIS_fnc_sortBy;
 					_spawnPos = [];
 					{
 						if (count _spawnPos != 0) then {break};
 						_spawnPos = _x findEmptyPosition [0,1,(_params select 0)];
-					} forEach _positions;
+					} forEach _sortedPositions;
 
 					if (count _spawnPos != 0) then {
 						_vehicle = createVehicle [(_params select 0), _spawnPos, [], 0, "CAN_COLLIDE"];
@@ -45,4 +47,4 @@ _vehicleGroup = "";
 			};
 		} forEach _vehicles;
 	} forEach _vehicleGroups;
-} forEach _factions;
+} forEach wsot_allFactionsArray;

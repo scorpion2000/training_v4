@@ -13,8 +13,8 @@ _faction = "";
 				[_x, 0, ["ACE_MainActions"], _action] call ace_interact_menu_fnc_addActionToObject;
 			} forEach _controllers;
 		} else {
-			_name = (_x select 0);
 			_className = (_x select 1);
+			_name = getText (configFile >> "CfgVehicles" >> _classname >> "displayName");
 			_action = [_className, _name, "", {
 				params ["_target", "_player", "_params"];
 				_pos = missionNamespace getVariable [[(_target getVariable ["controlGroup", ""]),"placement"] joinString "_", [0,0,0]];

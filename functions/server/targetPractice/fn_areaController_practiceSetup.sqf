@@ -29,12 +29,12 @@ _practiceEndText = format ["<t color='#5220c7'>%1</t>", (wsot_practiceFinish sel
 	[(_this select 1), 0, _targetCount] remoteExec ["wsot_fnc_practiceCallerHint", 2, false];
 }, nil, 1, true, false, "", "true", 8, false, "", ""]] remoteExec ["addAction", 0, false];
 [_controller, [_addToTimerText, {
-	_timerCount = ((_this select 0) getVariable ["wsot_practiceTimer", 1]) + 10;
+	_timerCount = ((_this select 0) getVariable ["wsot_practiceTimer", 30]) + 10;
 	(_this select 0) setVariable ["wsot_practiceTimer", _timerCount, true];
 	[(_this select 1), 1, _timerCount] remoteExec ["wsot_fnc_practiceCallerHint", 2, false];
 }, nil, 1, true, false, "", "true", 8, false, "", ""]] remoteExec ["addAction", 0, false];
 [_controller, [_removeFromTimerText, {
-	_timerCount = ((_this select 0) getVariable ["wsot_practiceTimer", 1]) - 10;
+	_timerCount = ((_this select 0) getVariable ["wsot_practiceTimer", 30]) - 10;
 	(_this select 0) setVariable ["wsot_practiceTimer", _timerCount, true];
 	[(_this select 1), 1, _timerCount] remoteExec ["wsot_fnc_practiceCallerHint", 2, false];
 }, nil, 1, true, false, "", "true", 8, false, "", ""]] remoteExec ["addAction", 0, false];
@@ -43,6 +43,7 @@ _practiceEndText = format ["<t color='#5220c7'>%1</t>", (wsot_practiceFinish sel
 
 [_controller, [_practiceStartText, {
 	[(_this select 0)] remoteExec ["wsot_fnc_areaController_startPractice", 2, false];
+	[(_this select 1), 3] remoteExec ["wsot_fnc_practiceCallerHint", 2, false];
 }, nil, 1, true, false, "", "true", 8, false, "", ""]] remoteExec ["addAction", 0, false];
 [_controller, [_practiceEndText, {
 	[(_this select 0)] remoteExec ["wsot_fnc_areaController_endPractice", 2, false];

@@ -45,6 +45,12 @@ _antiAir = [
 	["Bardelas", "B_APC_Tracked_01_AA_F"]
 ];
 
+_antiTank = [
+	["antiTank", "Mobile Anti-Tank"],
+	["Rooikat 120 (DLC)", "B_AFV_Wheeled_01_cannon_F"],
+	["Rooikat 120 UP (DLC)", "B_AFV_Wheeled_01_up_cannon_F"]
+];
+
 _artillery = [
 	["artillery", "Mobile Artillery"],
 	["Sholef", "B_MBT_01_arty_F"],
@@ -57,6 +63,6 @@ _tank = [
 	["Merkava Mk IV LIC", "B_MBT_01_TUSK_F"]
 ];
 
-_return = [_car, _truck, _mrap, _apc, _ifv, _antiAir, _artillery, _tank];
+_return = [_car, _truck, _mrap, _apc, _ifv, _antiAir, _antiTank, _artillery, _tank];
 
 _return

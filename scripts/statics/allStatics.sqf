@@ -51,6 +51,17 @@ _rusStatic = [
 	["ZU-23-2", "RHS_ZU23_MSV"]
 ];
 
-_return = [_natoStatic, _csatStatic, _usaStatic, _rusStatic];
+_spaStatic = [
+	"Spain",
+	["9K115-2 'Metis-M'", "ffaa_lag40_tripode"],
+	["9K115-1 'Kornet-M'", "ffaa_m2_ship_tripode"],
+	["9K38 (Djigit)", "ffaa_m2_tripode"],
+	["AGS-30 (6P17)", "ffaa_milan_tripode"],
+	["KORD (6T7)", "ffaa_mistral_tripode"],
+	["KORD (6U16)", "ffaa_spike_tripode"],
+	["NSV (6T7)", "ffaa_tow_tripode"]
+];
+
+_return = [_natoStatic, _csatStatic, _usaStatic, _rusStatic, _spaStatic];
 
 _return

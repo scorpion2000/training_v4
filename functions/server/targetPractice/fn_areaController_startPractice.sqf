@@ -18,13 +18,13 @@ _targets = _trigger getVariable ["targets", []];
 	_x animate ["terc", 1];
 	_x setVariable ["practice_isHit", true];
 	_x addEventHandler ["Hit", {
-		(_this select 0) setVariable ["practice_isHit", true];
-		[
-			((_this select 0) getVariable ["parentTrigger", objNull]), 
-			(_this select 0)
-		] remoteExec ["wsot_fnc_randomTargetPopup", 2, false];
 		if !((_this select 0) getVariable ["practice_isHit", false]) then {
+			(_this select 0) setVariable ["practice_isHit", true];
 			[(_this select 0), (_this select 1)] remoteExec ["wsot_fnc_practiceRegisterShooter", 2, false];
+			[
+				((_this select 0) getVariable ["parentTrigger", objNull]), 
+				(_this select 0)
+			] remoteExec ["wsot_fnc_randomTargetPopup", 2, false];
 		};
 	}];
 } forEach _targets;
