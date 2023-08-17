@@ -7,4 +7,16 @@ if !(count ([] call acre_api_fnc_getCurrentRadioList) <= 0) then {
 };
 
 [] execVM "scripts\createAceStaticActions.sqf";
-[] execVM "scripts\mapHideIcon.sqf"
+[] execVM "scripts\mapHideIcon.sqf";
+
+player addEventHandler ["GetInMan", {
+	params ["_unit", "_role", "_vehicle", "_turret"];
+	_vehicle setVariable ["thisOwner", (owner _unit), true];
+	_allVehicles = _unit getVariable ["enteredVehicles", []];
+	if !(_vehicle in _allVehicles) then {
+		_allVehicles pushBack _vehicle;
+		_unit setVariable ["enteredVehicles", _allVehicles];
+	};
+}];
+
+[] call wsot_fnc_welcomeMessage;

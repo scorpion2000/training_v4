@@ -46,12 +46,12 @@ _apc = [
 	["Stryker (Mk19)", "rhsusf_stryker_m1126_mk19_d"],
 	["Stryker (M2/LRAS3)", "rhsusf_stryker_m1127_m2_d"],
 	["Stryker (SMP/M2)", "rhsusf_stryker_m1132_m2_d"],
-	["Stryker", "rhsusf_stryker_m1134_m2_d"],
-	["M113A3", "rhsusf_stryker_m113d_usarmy_unarmed"],
-	["M113A3 (Ammo)", "rhsusf_stryker_m113d_usarmy_supply"],
-	["M113A3 (M2)", "rhsusf_stryker_m113d_usarmy"],
-	["M113A3 (M240)", "rhsusf_stryker_m113d_usarmy_M240"],
-	["M113A3 (MEV)", "rhsusf_stryker_m113d_usarmy_medical"]
+	["Stryker", "rhsusf_stryker_m1134_d"],
+	["M113A3", "rhsusf_m113d_usarmy_unarmed"],
+	["M113A3 (Ammo)", "rhsusf_m113d_usarmy_supply"],
+	["M113A3 (M2)", "rhsusf_m113d_usarmy"],
+	["M113A3 (M240)", "rhsusf_m113d_usarmy_M240"],
+	["M113A3 (MEV)", "rhsusf_m113d_usarmy_medical"]
 ];
 
 _ifv = [
@@ -77,7 +77,7 @@ _artillery = [
 _tank = [
 	["tank", "Tanks"],
 	["M1A1 Abrams", "rhsusf_m1a1aimd_usarmy"],
-	["M1A1 Abrams (TUSK I)", "rhsusf_m1a1aimd_tuski_usarmy"],
+	["M1A1 Abrams (TUSK I)", "rhsusf_m1a1aim_tuski_d"],
 	["M1A2 Abrams", "rhsusf_m1a2sep1d_usarmy"],
 	["M1A2 Abrams (TUSK I)", "rhsusf_m1a2sep1tuskid_usarmy"],
 	["M1A2 Abrams (TUSK II)", "rhsusf_m1a2sep1tuskiid_usarmy"],

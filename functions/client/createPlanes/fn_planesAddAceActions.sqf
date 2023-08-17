@@ -21,6 +21,11 @@ params ["_controllers"];
 			_vehicle = createVehicle [(_params select 0), _position, [], 0, "CAN_COLLIDE"];
 			_vehicle setDir 180;
 			_target setVariable ["thisPlane", _vehicle, true];
+
+			_vehicle setVariable ["thisOwner", (owner player), true];
+			_allVehicles = player getVariable ["enteredVehicles", []];
+			_allVehicles pushBack _vehicle;
+			player setVariable ["enteredVehicles", _allVehicles];
 		}, {true}, {}, [_className]] call ace_interact_menu_fnc_createAction;
 		{
 			[_x, 0, ["ACE_MainActions", _faction], _action] call ace_interact_menu_fnc_addActionToObject;

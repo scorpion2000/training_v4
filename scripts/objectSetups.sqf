@@ -10,6 +10,10 @@
 [drr2_t, "drr2"] remoteExec ["wsot_fnc_targetTriggerSetup", 2, false];
 [drr2_sb, drr2_t] remoteExec ["wsot_fnc_registerScoreboard", 2, false];
 
+[sniper_c, "sniper", true] remoteExec ["wsot_fnc_areaControllerSetup", 2, false];
+[sniper_t, "sniper"] remoteExec ["wsot_fnc_targetTriggerSetup", 2, false];
+[sniper_sb, sniper_t] remoteExec ["wsot_fnc_registerScoreboard", 2, false];
+
 [tfa_t, "tfa"] remoteExec ["wsot_fnc_targetTriggerSetup", 2, false];
 [tfa_c_1, "tfa", true] remoteExec ["wsot_fnc_areaControllerSetup", 2, false];
 [tfa_c_2, "tfa", true] remoteExec ["wsot_fnc_areaControllerSetup", 2, false];
@@ -139,6 +143,20 @@
 [vr_t_16, "vr16"] remoteExec ["wsot_fnc_vehicleTriggerSetup", 2, false];
 [vr_t_17, "vr17"] remoteExec ["wsot_fnc_vehicleTriggerSetup", 2, false];
 [vr_t_18, "vr18"] remoteExec ["wsot_fnc_vehicleTriggerSetup", 2, false];
+[vr_t_19, "vr19"] remoteExec ["wsot_fnc_vehicleTriggerSetup", 2, false];
+[vr_t_20, "vr20"] remoteExec ["wsot_fnc_vehicleTriggerSetup", 2, false];
+[vr_t_21, "vr21"] remoteExec ["wsot_fnc_vehicleTriggerSetup", 2, false];
+[vr_t_22, "vr22"] remoteExec ["wsot_fnc_vehicleTriggerSetup", 2, false];
+[vr_t_23, "vr23"] remoteExec ["wsot_fnc_vehicleTriggerSetup", 2, false];
+[vr_t_24, "vr24"] remoteExec ["wsot_fnc_vehicleTriggerSetup", 2, false];
+[vr_t_25, "vr25"] remoteExec ["wsot_fnc_vehicleTriggerSetup", 2, false];
+[vr_t_26, "vr26"] remoteExec ["wsot_fnc_vehicleTriggerSetup", 2, false];
+[vr_t_27, "vr27"] remoteExec ["wsot_fnc_vehicleTriggerSetup", 2, false];
+[vr_t_28, "vr28"] remoteExec ["wsot_fnc_vehicleTriggerSetup", 2, false];
+[vr_t_29, "vr29"] remoteExec ["wsot_fnc_vehicleTriggerSetup", 2, false];
+[vr_t_30, "vr30"] remoteExec ["wsot_fnc_vehicleTriggerSetup", 2, false];
+[vr_t_31, "vr31"] remoteExec ["wsot_fnc_vehicleTriggerSetup", 2, false];
+[vr_t_32, "vr32"] remoteExec ["wsot_fnc_vehicleTriggerSetup", 2, false];
 
 [ar_c_1, "ar1", true] remoteExec ["wsot_fnc_artilleryController", 2, false];
 [ar_c_2, "ar2", true] remoteExec ["wsot_fnc_artilleryController", 2, false];
@@ -178,5 +196,8 @@
 
 [drr1_c, "drr1", true] remoteExec ["wsot_fnc_eodController", 2, false];
 [drr1_T, "drr1"] remoteExec ["wsot_fnc_eodTriggerSetup", 2, false];
+
+[boat1_t, "boat1"] remoteExec ["wsot_fnc_boatTriggerSetup", 2, false];
+[boat2_t, "boat2"] remoteExec ["wsot_fnc_boatTriggerSetup", 2, false];
 
 //I'll be honest, this was a bad idea

@@ -120,4 +120,6 @@ if (!_hasEraOrSlat) then {
 	_string = [_string, _s] joinString "\n";
 };
 
+if !(alive wsot_bRangeLastHit) then {deleteVehicle wsot_bRangeLastHit};
+
 [_string] remoteExec ["hint", (owner _damageSource), false];

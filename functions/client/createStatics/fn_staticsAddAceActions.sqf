@@ -19,6 +19,11 @@ _faction = "";
 				params ["_target", "_player", "_params"];
 				_pos = missionNamespace getVariable [[(_target getVariable ["controlGroup", ""]),"placement"] joinString "_", [0,0,0]];
 				_static = createVehicle [(_params select 0), _pos, [], 0, "CAN_COLLIDE"];
+
+				_static setVariable ["thisOwner", (owner player), true];
+				_allVehicles = player getVariable ["enteredVehicles", []];
+				_allVehicles pushBack _static;
+				player setVariable ["enteredVehicles", _allVehicles];
 			}, {true}, {}, [_className]] call ace_interact_menu_fnc_createAction;
 			{
 				[_x, 0, ["ACE_MainActions", _faction], _action] call ace_interact_menu_fnc_addActionToObject;

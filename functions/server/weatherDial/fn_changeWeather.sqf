@@ -2,7 +2,7 @@ params ["_weather", "_caller"];
 
 if (wsot_changingWeather) exitWith {
 	systemChat "ERROR: Already changing weather";
-	["ERROR: Already changing weather"] remoteExec ["hint", (owner _caller), false];
+	["ERROR: Already changing weather! Please wait and don't spam!"] remoteExec ["hint", (owner _caller), false];
 };
 wsot_changingWeather = true;
 
@@ -12,6 +12,8 @@ switch (_weather) do {
 		10 setRain 0;
 		setHumidity 0;
 		10 setLightnings 0;
+		10 setWindForce 0.1;
+		10 setGusts 0;
 		forceWeatherChange;
 	};
 
@@ -20,6 +22,8 @@ switch (_weather) do {
 		10 setRain 0;
 		setHumidity 0.2;
 		10 setLightnings 0;
+		10 setWindForce 0.375;
+		10 setGusts 0.25;
 		forceWeatherChange;
 	};
 
@@ -28,6 +32,8 @@ switch (_weather) do {
 		10 setRain 0.5;
 		setHumidity 0.6;
 		10 setLightnings 0.15;
+		10 setWindForce 0.65;
+		10 setGusts 0.5;
 		forceWeatherChange;
 	};
 
@@ -36,6 +42,8 @@ switch (_weather) do {
 		10 setRain 1;
 		setHumidity 1;
 		10 setLightnings 0.6;
+		10 setWindForce 0.9;
+		10 setGusts 0.75;
 		forceWeatherChange;
 	};
 
@@ -64,6 +72,8 @@ switch (_weather) do {
 		10 setRain 0;
 		setHumidity 0;
 		10 setLightnings 0;
+		10 setWindForce 0.1;
+		10 setGusts 0;
 		forceWeatherChange;
 	};
 };

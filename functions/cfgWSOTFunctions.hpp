@@ -6,6 +6,15 @@ class WSOTFunctions {
 		file = "functions\server";
 
 		class reportDamage;
+		class handleDisconnectVehicles;
+	};
+
+	class WSOT_ClientUtils
+	{
+		file = "functions\client";
+
+		class changeArtyMarkers;
+		class welcomeMessage;
 	};
 
 	class WSOT_Server_TargetPractice
@@ -168,6 +177,21 @@ class WSOTFunctions {
 		class planesAddAceActions;
 	};
 
+	class WSOT_Server_ServerCreateBoats
+	{
+		file = "functions\server\createBoats";
+
+		class boatTriggerSetup;
+		class boatController;
+	};
+
+	class WSOT_Server_ClientCreateBoats
+	{
+		file = "functions\client\createBoats";
+
+		class boatAddAceActions;
+	};
+
 	class WSOT_Server_TimeDial
 	{
 		file = "functions\server\timeDial";
@@ -193,8 +217,11 @@ class WSOTFunctions {
 		class generateMines;
 	};
 
-	class WSOT_Client
+	class WSOT_Server_bRange
 	{
-		file = "functions\client";
+		file = "functions\server\bRangeTargets";
+
+		class changeBRangeTargets;
+		class bRangeController;
 	};
 };

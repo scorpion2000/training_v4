@@ -130,8 +130,8 @@ wsot_rangeSelectVehicle = [
 ];
 
 wsot_rangeExit = [
-	"Kilépés",
-	"Exit"
+	"Vissza",
+	"Back"
 ];
 
 wsot_removeAllVehicles = [
@@ -257,4 +257,9 @@ wsot_eodApMineGen = [
 wsot_eodAtMineGen = [
 	"AT Aknák Generálása (10)",
 	"Generate AT Mines (10)"
+];
+
+wsot_artyInUseMessage = [
+	"Úgy néz ki valaki tüzérségi ágyúkkal gyakorol!\nHaladj óvatosan a tüzérségi ágyúk becsapódási területein (vörös körök a térképen)!",
+	"Looks like someone's practicing with artillery!\nThread carefully in the impact zones (marked with red circles on your map)!"
 ];

@@ -29,10 +29,10 @@ _car = [
 ];
 
 _carNavy = [
-	["car", "Cars (Navy)"],
-	["car", "ffaa_et_vamtac_st5_vsp_lag40"],
-	["GAZ", "ffaa_et_vamtac_st5_vsp_m2"],
-	["GAZ (Weapons)", "ffaa_et_vamtac_st5_vsp_spike"]
+	["carNavy", "Cars (Navy)"],
+	["car", "ffaa_ar_vamtac_st5_vsp_lag40"],
+	["GAZ", "ffaa_ar_vamtac_st5_vsp_m2"],
+	["GAZ (Weapons)", "ffaa_ar_vamtac_st5_vsp_spike"]
 ];
 
 _truck = [

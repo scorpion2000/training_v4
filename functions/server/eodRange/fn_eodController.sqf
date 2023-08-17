@@ -3,6 +3,8 @@ params ["_controller", "_controlGroup", ["_firstTime", false]];
 [_controller] remoteExec ["removeAllActions", 0, false];
 _controller setObjectTextureGlobal [1, "images\vehicle.paa"];
 
+waitUntil { !(isNil "wsot_controllerWelcome") };
+
 if (_controlGroup != "") then {
 	_controller setVariable ["controlGroup", _controlGroup, true];
 } else {

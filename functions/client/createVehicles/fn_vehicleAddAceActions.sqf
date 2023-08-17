@@ -40,6 +40,11 @@ _vehicleGroup = "";
 						_vehicle = createVehicle [(_params select 0), _spawnPos, [], 0, "CAN_COLLIDE"];
 						_vehicle setDir (getDir _target) + 90;
 					};
+
+					_vehicle setVariable ["thisOwner", (owner player), true];
+					_allVehicles = player getVariable ["enteredVehicles", []];
+					_allVehicles pushBack _vehicle;
+					player setVariable ["enteredVehicles", _allVehicles];
 				}, {true}, {}, [_className]] call ace_interact_menu_fnc_createAction;
 				{
 					[_x, 0, ["ACE_MainActions", _faction, _vehicleGroup], _action] call ace_interact_menu_fnc_addActionToObject;

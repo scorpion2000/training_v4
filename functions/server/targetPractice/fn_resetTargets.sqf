@@ -1,4 +1,6 @@
-params ["_trigger"];
+params ["_controller"];
+
+_trigger = missionNamespace getVariable [[_controller getVariable ["controlGroup", ""], "trigger"] joinString "_", objNull];
 
 _targets = _trigger getVariable ["targets", []];
 {

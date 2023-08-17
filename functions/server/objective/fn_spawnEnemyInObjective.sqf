@@ -99,6 +99,7 @@ while {_regularOnPatrol > 0} do {
 
 	_wpRepeat = _group addWaypoint [getPos (leader _group), 0];
 	_wpRepeat setWaypointType "CYCLE";
+	_group setSpeedMode "LIMITED";
 
 	_allGroups pushBack _group;
 };

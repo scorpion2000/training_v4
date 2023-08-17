@@ -9,9 +9,9 @@ _trigger = missionNamespace getVariable [[_controller getVariable ["controlGroup
 
 _class = "";
 switch (_type) do {
-	case "ap": { _class = "APERSMine" };
-	case "at": { _class = "ATMine" };
-	default { _class = "APERSMine" };
+	case "ap": { _class = "APERSMine_Range_Ammo" };
+	case "at": { _class = "ATMine_Range_Ammo" };
+	default { _class = "APERSMine_Range_Ammo" };
 };
 
 _mines = [];

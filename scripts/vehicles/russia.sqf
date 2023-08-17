@@ -32,7 +32,7 @@ _truck = [
 	["Ural (Ammo)", "RHS_Ural_Ammo_MSV_01"],
 	["Ural (Flatbed)", "RHS_Ural_Flat_MSV_01"],
 	["Ural (Fuel)", "RHS_Ural_Fuel_MSV_01"],
-	["Ural (ZSU-23)", "RHS_Ural_Zsu23_MSV_01"],
+	["Ural (ZSU-23)", "RHS_Ural_Zu23_MSV_01"],
 	["ZiL", "rhs_zil131_msv"],
 	["ZiL (Flatbed)", "rhs_zil131_flatbed_msv"],
 	["ZiL (Open)", "rhs_zil131_open_msv"],
@@ -44,7 +44,7 @@ _mrap = [
 	["BRDM-2", "rhsgref_BRDM2_msv"],
 	["BRDM-2 (9P148)", "rhsgref_BRDM2_ATGM_msv"],
 	["BRDM-2UM", "rhsgref_BRDM2UM_msv"],
-	["BRDM-2UM (Armed)", "rhsgref_BRDM2UM_HQ_msv"]
+	["BRDM-2UM (Armed)", "rhsgref_BRDM2_HQ_msv"]
 ];
 
 _apc = [
@@ -62,9 +62,9 @@ _ifv = [
 	["BPM-3 (early)", "rhs_bmp3_msv"],
 	["BPM-3 (late)", "rhs_bmp3_late_msv"],
 	["BRM-1K", "rhs_brm1k_msv"],
-	["BDM-1", "rhs_bdm1"],
-	["BDM-2", "rhs_bdm2"],
-	["BDM-4", "rhs_bdm4_vdv"]
+	["BDM-1", "rhs_bmd1"],
+	["BDM-2", "rhs_bmd2"],
+	["BDM-4", "rhs_bmd4_vdv"]
 ];
 
 _antiAir = [

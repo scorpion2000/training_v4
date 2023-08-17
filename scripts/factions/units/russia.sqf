@@ -2,17 +2,17 @@
 /*	SIDENOTE: CLASSNAMES ARE CASE SENSITIVE	*/
 
 _regulars = [
-	"rhs_msv_emr_rifleman",
-	"rhs_msv_emr_rifleman",
-	"rhs_msv_emr_rifleman",
-	"rhs_msv_emr_rifleman",
-	"rhs_msv_emr_arifleman_rpk",
-	"rhs_msv_emr_arifleman_rpk",
-	"rhs_msv_emr_efreitor"
+	"rhs_msv_rifleman",
+	"rhs_msv_rifleman",
+	"rhs_msv_rifleman",
+	"rhs_msv_rifleman",
+	"rhs_msv_arifleman_rpk",
+	"rhs_msv_arifleman_rpk",
+	"rhs_msv_efreitor"
 ];
 
 _special = [
-	"rhs_msv_emr_officer"
+	"rhs_msv_officer"
 ];
 
 _unarmed = [

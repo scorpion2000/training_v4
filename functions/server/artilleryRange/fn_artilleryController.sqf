@@ -3,6 +3,8 @@ params ["_controller", "_rangeName", ["_firstTime", false]];
 [_controller] remoteExec ["removeAllActions", 0, false];
 _controller setObjectTextureGlobal [1, "images\artillery.paa"];
 
+waitUntil { !(isNil "wsot_controllerWelcome") };
+
 if (_rangeName != "") then {
 	_controller setVariable ["rangeName", _rangeName, true];
 } else {
