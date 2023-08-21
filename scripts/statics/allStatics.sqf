@@ -31,7 +31,7 @@ _csatStatic = [
 
 _usaStatic = [
 	"USA",
-	["FIM-92F (DMS) (Stinger)", "RHS_Stringer_AA_pod_D"],
+	["FIM-92F (DMS) (Stinger)", "RHS_Stinger_AA_pod_D"],
 	["M2HB (M3 AA)", "RHS_M2StaticMG_D"],
 	["M2HB (M3)", "RHS_M2StaticMG_MiniTripod_D"],
 	["M41A4 TOW", "RHS_TOW_TriPod_D"],
@@ -42,8 +42,8 @@ _rusStatic = [
 	"Russia",
 	["9K115-2 'Metis-M'", "rhs_Metis_9k115_2_msv"],
 	["9K115-1 'Kornet-M'", "rhs_Kornet_9M133_2_msv"],
-	["9K38 (Djigit)", "rhs_lga_AA_pod_msv"],
-	["AGS-30 (6P17)", "RHS_AG30_TriPod_MSV"],
+	["9K38 (Djigit)", "rhs_lgla_AA_pod_msv"],
+	["AGS-30 (6P17)", "RHS_AGS30_TriPod_MSV"],
 	["KORD (6T7)", "rhs_KORD_MSV"],
 	["KORD (6U16)", "rhs_KORD_high_MSV"],
 	["NSV (6T7)", "RHS_NSV_TriPod_MSV"],

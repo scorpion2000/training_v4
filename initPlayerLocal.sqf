@@ -7,7 +7,8 @@ if !(count ([] call acre_api_fnc_getCurrentRadioList) <= 0) then {
 };
 
 [] execVM "scripts\createAceStaticActions.sqf";
-[] execVM "scripts\mapHideIcon.sqf";
+
+player setVariable ["respawnLoadout", (getUnitLoadout player), true];
 
 player addEventHandler ["GetInMan", {
 	params ["_unit", "_role", "_vehicle", "_turret"];
@@ -20,3 +21,4 @@ player addEventHandler ["GetInMan", {
 }];
 
 [] call wsot_fnc_welcomeMessage;
+[player] remoteExec ["wsot_fnc_assignOwnerId", 2, false];

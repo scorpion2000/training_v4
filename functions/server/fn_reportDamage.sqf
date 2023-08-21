@@ -1,4 +1,4 @@
-params ["_vehicle", "_vehicleName", "_damageSource"];
+params ["_vehicle", "_vehicleName", "_damageSource", "_instigator"];
 
 wsot_bRangeLastHit = _vehicle;
 if (wsot_bRangeReportDelay != 0) exitWith {wsot_bRangeReportDelay = 3};
@@ -122,4 +122,18 @@ if (!_hasEraOrSlat) then {
 
 if !(alive wsot_bRangeLastHit) then {deleteVehicle wsot_bRangeLastHit};
 
-[_string] remoteExec ["hint", (owner _damageSource), false];
+_sourceOwner = _damageSource getVariable ["thisOwner", 2];
+{
+	if (admin (owner _x) == 0) then {continue};
+	[format ["userID %1 (or vehicleOwner %2) hit a bombing range target!", (owner _instigator), _sourceOwner]] remoteExec ["systemChat", (owner _x), false];
+} forEach allPlayers;
+
+systemChat format ["userID %1 (or vehicleOwner %2) hit a bombing range target!", (owner _instigator), _sourceOwner];
+
+if (owner _instigator != 0) then {
+	[_string] remoteExec ["hint", (owner _instigator), false];
+} else {
+	if (_sourceOwner != 2 || _sourceOwner != 0) then {
+		[_string] remoteExec ["hint", _sourceOwner, false];
+	};
+};

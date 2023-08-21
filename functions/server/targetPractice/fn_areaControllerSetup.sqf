@@ -34,7 +34,7 @@ _targetPracticeSetup = format ["<t color='#20c781'>%1</t>", (wsot_controllerTarg
 [_controller, [_dividerText, {}, nil, 1, true, false, "", "true", 8, false, "", ""]] remoteExec ["addAction", 0, _firstTime];
 
 [_controller, [_popupToggleText, {
-	[(_this select 0)] remoteExec ["wsot_fnc_toggleTargetPopups", 2, false];
+	[(_this select 0), (_this select 1)] remoteExec ["wsot_fnc_toggleTargetPopups", 2, false];
 }, nil, 1, true, true, "", "true", 8, false, "", ""]] remoteExec ["addAction", 0, _firstTime];
 [_controller, [_targetResetText, {
 	[(_this select 0)] remoteExec ["wsot_fnc_resetTargets", 2, false];

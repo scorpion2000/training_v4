@@ -23,4 +23,4 @@ if (_categoryF) then {
 };
 
 wsot_bRangeForceRedeploy = true;
-[_controller, ""] remoteExec ["wsot_fnc_bRangeController", 2, false];
+[_controller] remoteExec ["wsot_fnc_bRangeController", 2, false];

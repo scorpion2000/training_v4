@@ -1,7 +1,7 @@
 params ["_controller", ["_firstTime", false]];
 
 [_controller] remoteExec ["removeAllActions", 0, false];
-_controller setObjectTextureGlobal [1, "images\vehicle.paa"];
+_controller setObjectTextureGlobal [1, "images\bRange.paa"];
 
 waitUntil { !(isNil "wsot_controllerWelcome") };
 waitUntil { !(isNil "wsot_allFactionsBRange") };
@@ -13,7 +13,7 @@ _allCategories = ["car", "carNavy", "truck", "apc", "ifv", "artillery", "tank", 
 
 [_controller, [_welcomeText, {}, nil, 1, true, false, "", "true", 8, false, "", ""]] remoteExec ["addAction", 0, _firstTime];
 [_controller, [_resetText, {
-	[(_this select 0), ""] remoteExec ["wsot_fnc_bRangeController", 2, false];
+	[(_this select 0)] remoteExec ["wsot_fnc_bRangeController", 2, false];
 }, nil, 1, true, false, "", "true", 8, false, "", ""]] remoteExec ["addAction", 0, _firstTime];
 
 [_controller, [_dividerText, {}, nil, 1, true, false, "", "true", 8, false, "", ""]] remoteExec ["addAction", 0, _firstTime];

@@ -7,6 +7,9 @@ class WSOTFunctions {
 
 		class reportDamage;
 		class handleDisconnectVehicles;
+		class toggleAirPractice;
+		class toggleAirPracticeController;
+		class assignOwnerId;
 	};
 
 	class WSOT_ClientUtils
@@ -52,6 +55,8 @@ class WSOTFunctions {
 		class objectiveGenerateVip;
 		class removeObjective;
 		class activateArea;
+		class objectiveGenerateMines;
+		class objectiveRemoveMines;
 	};
 
 	class WSOT_Server_AtRange
@@ -66,6 +71,12 @@ class WSOTFunctions {
 		class displayVehicleDamage;
 		class registerDamageBoards;
 		class deleteVehicles;
+		class fixedTargetController;
+		class fixedTargetRegisterPoint;
+		class fixedTargetSetParams;
+		class fixedTargetRegisterVirt;
+		class fixedTargetToggle;
+		class fixedTargetVirtualisation;
 	};
 
 	class WSOT_Server_CreateStatics
@@ -190,6 +201,36 @@ class WSOTFunctions {
 		file = "functions\client\createBoats";
 
 		class boatAddAceActions;
+	};
+
+	class WSOT_Server_ServerCrateRequest
+	{
+		file = "functions\server\crateRequest";
+
+		class crateController;
+		class crateRegisterPosition;
+	};
+
+	class WSOT_Server_ClientCreateCrate
+	{
+		file = "functions\client\createCrate";
+
+		class crateAddAceActions;
+	};
+
+	class WSOT_Server_ServerCreateUavs
+	{
+		file = "functions\server\createUavs";
+
+		class uavController;
+		class uavTriggerSetup;
+	};
+
+	class WSOT_Server_ClientCreateUavs
+	{
+		file = "functions\client\createUavs";
+
+		class uavAddAceActions;
 	};
 
 	class WSOT_Server_TimeDial

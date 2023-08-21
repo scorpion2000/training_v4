@@ -11,5 +11,5 @@ while {!_foundHitTarget} do {
 	};
 };
 
-_target setVariable ["practice_isHit", false];
+_target setVariable ["practice_isHit", false, true];
 _target animate ["terc", 0];

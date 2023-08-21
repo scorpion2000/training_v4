@@ -18,12 +18,21 @@ _faction = "";
 			_action = [_className, _name, "", {
 				params ["_target", "_player", "_params"];
 				_pos = missionNamespace getVariable [[(_target getVariable ["controlGroup", ""]),"placement"] joinString "_", [0,0,0]];
-				_static = createVehicle [(_params select 0), _pos, [], 0, "CAN_COLLIDE"];
+				_prevCrate = _target getVariable ["prevStatic", objNull];
+				if !(isNull _prevCrate) then {
+					if (_prevCrate distance (getPos _position) < 3) then {
+						deleteVehicle _prevCrate;
+					};
+				};
 
-				_static setVariable ["thisOwner", (owner player), true];
-				_allVehicles = player getVariable ["enteredVehicles", []];
+				_static = createVehicle [(_params select 0), _pos, [], 0, "CAN_COLLIDE"];
+				_target setVariable ["prevStatic", _vehicle, true];
+
+				//_static setVariable ["thisOwner", (owner _player), true];
+				[_static, _player] remoteExec ["wsot_fnc_assignOwnerId", 2, false];
+				_allVehicles = _player getVariable ["enteredVehicles", []];
 				_allVehicles pushBack _static;
-				player setVariable ["enteredVehicles", _allVehicles];
+				_player setVariable ["enteredVehicles", _allVehicles, true];
 			}, {true}, {}, [_className]] call ace_interact_menu_fnc_createAction;
 			{
 				[_x, 0, ["ACE_MainActions", _faction], _action] call ace_interact_menu_fnc_addActionToObject;

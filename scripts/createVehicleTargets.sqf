@@ -3,6 +3,8 @@
 *	with your own custom array.
 */
 
+waitUntil { !(isNil "wsot_allFactionsArray") };
+
 wsot_vehicleTargets = true;
 wsot_bRangeForceRedeploy = false;
 wsot_bRangeLastHit = objNull;
@@ -24,6 +26,7 @@ while { true } do {
 		_vehicleType = [];
 		//Some vehicle categories are not available in certain factions
 		//So we iterate. Sad.
+		//Later edit; Seems like we somehow still select bad categories. Must investigate later
 		while { count _vehicleType == 0 } do {
 			_type = selectRandom wsot_allTypesBRange;
 			{
@@ -38,12 +41,16 @@ while { true } do {
 		_vehicle addEventHandler ["Hit", {
 			params ["_unit", "_source", "_damage", "_instigator"];
 			_name = getText (configFile >> "CfgVehicles" >> (typeOf _unit) >> "displayName");
-			if (alive _unit) then {
-				[format ["%1: Target Hit", _name]] remoteExec ["hint", (owner _source), false];
-			} else {
-				[format ["%1: Target Hit", _name]] remoteExec ["hint", (owner _source), false];
-			};
-			[_unit, _name, _instigator] remoteExec ["wsot_fnc_reportDamage", 2, false];
+			[format ["%1: Target Hit", _name]] remoteExec ["hint", (owner _source), false];
+			
+			[_unit, _name, _source, _instigator] remoteExec ["wsot_fnc_reportDamage", 2, false];
+		}];
+
+		_vehicle addEventHandler ["Killed", {
+			params ["_unit", "_killer", "_instigator", "_useEffects"];
+			_name = getText (configFile >> "CfgVehicles" >> (typeOf _unit) >> "displayName");
+			[format ["%1: Target Destroyed", _name]] remoteExec ["hint", (owner _source), false];
+			[_unit, _name, _killer, _instigator] remoteExec ["wsot_fnc_reportDamage", 2, false];
 		}];
 		_vehicle engineOn true;
 		_vehicle setDir (random 360);

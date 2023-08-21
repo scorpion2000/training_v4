@@ -1,3 +1,5 @@
+//Why tf did I make all of these remote execs? Replace them with call
+
 [drr5_c, "drr5", true] remoteExec ["wsot_fnc_areaControllerSetup", 2, false];
 [drr5_t, "drr5"] remoteExec ["wsot_fnc_targetTriggerSetup", 2, false];
 [drr5_sb, drr5_t] remoteExec ["wsot_fnc_registerScoreboard", 2, false];
@@ -199,5 +201,7 @@
 
 [boat1_t, "boat1"] remoteExec ["wsot_fnc_boatTriggerSetup", 2, false];
 [boat2_t, "boat2"] remoteExec ["wsot_fnc_boatTriggerSetup", 2, false];
+
+[ur1_t, "ur1"] remoteExec ["wsot_fnc_uavTriggerSetup", 2, false];
 
 //I'll be honest, this was a bad idea

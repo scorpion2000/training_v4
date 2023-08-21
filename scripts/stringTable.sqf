@@ -109,6 +109,21 @@ wsot_objectiveWarnSideChange = [
 	"groups switched to OPFOR side!"
 ];
 
+wsot_objectiveGenerate10ApMine = [
+	"10 AP Akna Próba Generálása",
+	"Try Generate 10 AP Mines"
+];
+
+wsot_objectiveGenerate10AtMine = [
+	"10 AT Akna Próba Generálása",
+	"Try Generate 10 AT Mines"
+];
+
+wsot_objectiveRemoveMines = [
+	"Aknák törlése",
+	"Delete Mines"
+];
+
 wsot_rangeGenerateCar = [
 	"Autó generálása",
 	"Generate Car"
@@ -262,4 +277,54 @@ wsot_eodAtMineGen = [
 wsot_artyInUseMessage = [
 	"Úgy néz ki valaki tüzérségi ágyúkkal gyakorol!\nHaladj óvatosan a tüzérségi ágyúk becsapódási területein (vörös körök a térképen)!",
 	"Looks like someone's practicing with artillery!\nThread carefully in the impact zones (marked with red circles on your map)!"
+];
+
+wsot_atFixedToggle = [
+	"Fixált Célpont Kapcsolása",
+	"Toggle Fixed Target"
+];
+
+wsot_atFixedAdd50m = [
+	"50m Hozzáadása",
+	"Add 50m"
+];
+
+wsot_atFixedAdd100m = [
+	"100m Hozzáadása",
+	"Add 100m"
+];
+
+wsot_atFixedSub50m = [
+	"50m Levonása",
+	"Subtract 50m"
+];
+
+wsot_atFixedSub100m = [
+	"100m Levonása",
+	"Subtract 100m"
+];
+
+wsot_atFixedRotatePos30 = [
+	"Célpont forgatása +30 fokkal",
+	"Rotate target by +30 degrees"
+];
+
+wsot_atFixedRotateNeg30 = [
+	"Célpont forgatása -30 fokkal",
+	"Rotate target by -30 degrees"
+];
+
+wsot_atFixedVirtualise = [
+	"Célpont Virtualizációjának Állítása",
+	"Toggle Target Virtualisation"
+];
+
+wsot_toggleBRange = [
+	"Bombing Range Kapcsolása",
+	"Toggle Bombing Range"
+];
+
+wsot_toggleUAV = [
+	"UAV Célpontok Kapcsolása",
+	"Toggle UAV Targets"
 ];

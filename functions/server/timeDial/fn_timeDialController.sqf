@@ -1,7 +1,7 @@
 params ["_controller", ["_firstTime", false]];
 
 [_controller] remoteExec ["removeAllActions", 0, false];
-_controller setObjectTextureGlobal [1, "images\plane.paa"];
+_controller setObjectTextureGlobal [1, "images\time.paa"];
 
 waitUntil { !(isNil "wsot_controllerWelcome") };
 

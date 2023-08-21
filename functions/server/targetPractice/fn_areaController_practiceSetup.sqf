@@ -13,6 +13,7 @@ _addToTimerText = format ["<t color='#20c781'>%1</t>", (wsot_practiceAddToTimer 
 _removeFromTimerText = format ["<t color='#c72031'>%1</t>", (wsot_practiceRemoveFromTimer select wsot_preferedLanguage)];
 _practiceStartText = format ["<t color='#5220c7'>%1</t>", (wsot_practiceStart select wsot_preferedLanguage)];
 _practiceEndText = format ["<t color='#5220c7'>%1</t>", (wsot_practiceFinish select wsot_preferedLanguage)];
+_exitText = format ["<t color='#20c781'>%1</t>", (wsot_rangeExit select wsot_preferedLanguage)];
 
 [_controller, [_welcomeText, {}, nil, 1, true, false, "", "true", 8, false, "", ""]] remoteExec ["addAction", 0, false];
 
@@ -42,9 +43,15 @@ _practiceEndText = format ["<t color='#5220c7'>%1</t>", (wsot_practiceFinish sel
 [_controller, [_dividerText, {}, nil, 1, true, false, "", "true", 8, false, "", ""]] remoteExec ["addAction", 0, false];
 
 [_controller, [_practiceStartText, {
-	[(_this select 0)] remoteExec ["wsot_fnc_areaController_startPractice", 2, false];
+	[(_this select 0), (_this select 1)] remoteExec ["wsot_fnc_areaController_startPractice", 2, false];
 	[(_this select 1), 3] remoteExec ["wsot_fnc_practiceCallerHint", 2, false];
 }, nil, 1, true, false, "", "true", 8, false, "", ""]] remoteExec ["addAction", 0, false];
 [_controller, [_practiceEndText, {
 	[(_this select 0)] remoteExec ["wsot_fnc_areaController_endPractice", 2, false];
 }, nil, 1, true, false, "", "true", 8, false, "", ""]] remoteExec ["addAction", 0, false];
+
+[_controller, [_dividerText, {}, nil, 1, true, false, "", "true", 8, false, "", ""]] remoteExec ["addAction", 0, false];
+
+[_controller, [_exitText, {
+	[(_this select 0), ""] remoteExec ["wsot_fnc_areaControllerSetup", 2, false];
+}, nil, 1, true, false, "", "true", 8, false, "", ""]] remoteExec ["addAction", 0, _firstTime];

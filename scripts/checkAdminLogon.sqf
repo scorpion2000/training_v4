@@ -1,6 +1,6 @@
 _hasAdmin = false;
-_adminOnlineMsg = "An admin is online!\n\nPlease request permission\nbefore using anything\nin this section!";
-_adminOfflineMsg = "No admin online!\n\nPlease warn others\nbefore using anything\nin this section!";
+_adminOnlineMsg = "An admin is online\n\nPlease request permission\nbefore using anything\nin this section";
+_adminOfflineMsg = "No admin online\n\nPlease warn others\nbefore using anything\nin this section";
 
 _texture = format [
 	"#(rgb,1024,512,3)text(0,1,%1,0.125,%2,%3,%4)",

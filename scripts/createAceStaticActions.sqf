@@ -76,10 +76,19 @@ _planeControllers = [
 
 [_planeControllers] call wsot_fnc_planesAddAceActions;
 
+_uavControllers = [
+	ur1_c
+];
+
+[_uavControllers] call wsot_fnc_uavAddAceActions;
+
 sleep 3;
 
 _loadoutControllers = missionNamespace getVariable ["lControllers", []];
 [_loadoutControllers] call wsot_fnc_loadoutsAddAceActions;
+
+_crateControllers = missionNamespace getVariable ["cControllers", []];
+[_crateControllers] call wsot_fnc_crateAddAceActions;
 
 _tpFlags = missionNamespace getVariable ["tpFlags", []];
 [_tpFlags] call wsot_fnc_tpFlagcreateActions;
@@ -93,3 +102,6 @@ _rcPoles = missionNamespace getVariable ["rcPoles", []];
 //I think the script gets stuck here, need to investigate
 _boatControllers = missionNamespace getVariable ["bControllers", []];
 [_boatControllers] call wsot_fnc_boatAddAceActions;
+
+//I had to put this here. It's so fucking stupid..
+[] execVM "scripts\mapHideIcon.sqf";

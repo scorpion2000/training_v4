@@ -22,10 +22,11 @@ params ["_controllers"];
 			_vehicle setDir 180;
 			_target setVariable ["thisPlane", _vehicle, true];
 
-			_vehicle setVariable ["thisOwner", (owner player), true];
-			_allVehicles = player getVariable ["enteredVehicles", []];
+			//_vehicle setVariable ["thisOwner", (owner _player), true];
+			[_vehicle, _player] remoteExec ["wsot_fnc_assignOwnerId", 2, false];
+			_allVehicles = _player getVariable ["enteredVehicles", []];
 			_allVehicles pushBack _vehicle;
-			player setVariable ["enteredVehicles", _allVehicles];
+			_player setVariable ["enteredVehicles", _allVehicles, true];
 		}, {true}, {}, [_className]] call ace_interact_menu_fnc_createAction;
 		{
 			[_x, 0, ["ACE_MainActions", _faction], _action] call ace_interact_menu_fnc_addActionToObject;

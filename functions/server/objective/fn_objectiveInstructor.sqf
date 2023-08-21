@@ -25,6 +25,9 @@ _vipRescueMissionText = format ["<t color='#1ad620'>%1</t>", (wsot_objectiveGene
 _radarMissionText = format ["<t color='#1ad620'>%1</t>", (wsot_objectiveGenerateRadar select wsot_preferedLanguage)];
 _removeMissionText = format ["<t color='#eb4034'>%1</t>", (wsot_objectiveRemoveMission select wsot_preferedLanguage)];
 _activateObjectiveText = format ["<t color='#f4c430'>%1</t>", (wsot_objectiveActivateObjective select wsot_preferedLanguage)];
+_generateApMinesText = format ["<t color='#20c781'>%1</t>", (wsot_objectiveGenerate10ApMine select wsot_preferedLanguage)];
+_generateAtMinesText = format ["<t color='#20c781'>%1</t>", (wsot_objectiveGenerate10AtMine select wsot_preferedLanguage)];
+_removeMinesText = format ["<t color='#f4c430'>%1</t>", (wsot_objectiveRemoveMines select wsot_preferedLanguage)];
 
 [_controller, [_welcomeText, {}, nil, 1, true, false, "", "true", 8, false, "", ""]] remoteExec ["addAction", 0, _firstTime];
 [_controller, [_resetText, {
@@ -41,6 +44,18 @@ _activateObjectiveText = format ["<t color='#f4c430'>%1</t>", (wsot_objectiveAct
 }, nil, 1, true, true, "", "true", 8, false, "", ""]] remoteExec ["addAction", 0, _firstTime];
 [_controller, [_activateObjectiveText, {
 	[(_this select 0), (_this select 1)] remoteExec ["wsot_fnc_activateArea", 2, false];
+}, nil, 1, true, true, "", "true", 8, false, "", ""]] remoteExec ["addAction", 0, _firstTime];
+
+[_controller, [_dividerText, {}, nil, 1, true, false, "", "true", 8, false, "", ""]] remoteExec ["addAction", 0, _firstTime];
+
+[_controller, [_generateApMinesText, {
+	[(_this select 0), "ap", (_this select 1)] remoteExec ["wsot_fnc_objectiveGenerateMines", 2, false];
+}, nil, 1, true, true, "", "true", 8, false, "", ""]] remoteExec ["addAction", 0, _firstTime];
+[_controller, [_generateAtMinesText, {
+	[(_this select 0), "at", (_this select 1)] remoteExec ["wsot_fnc_objectiveGenerateMines", 2, false];
+}, nil, 1, true, true, "", "true", 8, false, "", ""]] remoteExec ["addAction", 0, _firstTime];
+[_controller, [_removeMinesText, {
+	[(_this select 0), (_this select 1)] remoteExec ["wsot_fnc_objectiveRemoveMines", 2, false];
 }, nil, 1, true, true, "", "true", 8, false, "", ""]] remoteExec ["addAction", 0, _firstTime];
 
 [_controller, [_dividerText, {}, nil, 1, true, false, "", "true", 8, false, "", ""]] remoteExec ["addAction", 0, _firstTime];

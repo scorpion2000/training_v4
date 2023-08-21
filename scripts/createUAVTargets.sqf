@@ -9,6 +9,7 @@ while { true } do {
 				deleteVehicle (_x getVariable ["thisUAV", objNull]);
 			};
 		} forEach _positionObjects;
+		sleep 20;
 		continue;
 	};
 

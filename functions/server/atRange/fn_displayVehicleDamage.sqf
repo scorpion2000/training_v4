@@ -8,6 +8,7 @@ _trigger setVariable ["isDisplaying", true];
 sleep 0.2;
 
 if (_trigger == objNull) exitWith {};
+_name = getText (configFile >> "CfgVehicles" >> (typeOf _vehicle) >> "displayName");
 
 _boards = _trigger getVariable ["damageBoards", []];
 if (count _boards == 0) exitWith {};
@@ -101,7 +102,7 @@ _string = format ["Full Health: %1%2\nPart Damage:", round (100 - (damage _vehic
 _texture = format ["#(rgb,512,512,3)text(0,0,%1,0.075,%2,%3,%4)", "EtelkaNarrowMediumPro", "#1a1a1a", "#f5f5f5", _string];
 (_boards select 2) setObjectTextureGlobal [0, _texture];
 
-_string = "Damaged ERA and/or SLAT:";
+_string = format ["%1\nDamaged ERA and/or SLAT:", _name];
 _hpArray = +(_hp select 0);
 _hasEraOrSlat = false;
 {

@@ -1,8 +1,11 @@
 wsot_preferedLanguage = 0;
 wsot_changingWeather = false;
 
-[] call compile preprocessFileLineNumbers "scripts\stringTable.sqf";	//Server has to wait for this
-[] execVM "scripts\factions\allFactions.sqf";
+ACE_maxWeightCarry = 4000;
+publicVariable "ACE_maxWeightCarry";	//Don't ask why
+
+[] call compile preprocessFileLineNumbers "scripts\stringTable.sqf";			//Server has to wait for this
+[] call compile preprocessFileLineNumbers "scripts\factions\allFactions.sqf";	//Server has to wait for this
 [] execVM "scripts\objectSetups.sqf";
 [] execVM "scripts\createUAVTargets.sqf";
 [] execVM "scripts\createVehicleTargets.sqf";
@@ -14,11 +17,13 @@ wsot_changingWeather = false;
 
 addMissionEventHandler ["HandleDisconnect", {
 	params ["_unit", "_id", "_uid", "_name"];
-	_owner = owner _unit;
-	_allVehicles = _unit getVariable ["allVehicles", []];
+	_owner = _unit getVariable ["thisOwner", 2];
+	_allVehicles = _unit getVariable ["enteredVehicles", []];
+
+	[format ["DEBUG: Deleting %1 vehicles by userID: %2", (count _allVehicles), _owner]] remoteExec ["systemChat", 0, false];
 
 	{
-		if ( _x getVariable ["thisOwner", 2] == (owner _owner) ) then { deleteVehicle _x };
+		if ( _x getVariable ["thisOwner", 2] == _owner ) then { deleteVehicle _x };
 	} forEach _allVehicles;
 
 	false;
