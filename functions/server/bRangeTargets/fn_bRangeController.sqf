@@ -12,9 +12,9 @@ _dividerText = wsot_controllerDivider select wsot_preferedLanguage;
 _allCategories = ["car", "carNavy", "truck", "apc", "ifv", "artillery", "tank", "antiTank", "antiAir"];
 
 [_controller, [_welcomeText, {}, nil, 1, true, false, "", "true", 8, false, "", ""]] remoteExec ["addAction", 0, _firstTime];
-[_controller, [_resetText, {
+/*[_controller, [_resetText, {
 	[(_this select 0)] remoteExec ["wsot_fnc_bRangeController", 2, false];
-}, nil, 1, true, false, "", "true", 8, false, "", ""]] remoteExec ["addAction", 0, _firstTime];
+}, nil, 1, true, false, "", "true", 8, false, "", ""]] remoteExec ["addAction", 0, _firstTime];*/
 
 [_controller, [_dividerText, {}, nil, 1, true, false, "", "true", 8, false, "", ""]] remoteExec ["addAction", 0, _firstTime];
 

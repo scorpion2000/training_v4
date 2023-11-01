@@ -22,9 +22,9 @@ _createTargetCloseText = format ["<t color='#b82525'>%1</t>", (wsot_artyCreateTa
 _createTargetFarText = format ["<t color='#b82525'>%1</t>", (wsot_artyCreateTargetFar select wsot_preferedLanguage)];
 
 [_controller, [_welcomeText, {}, nil, 1, true, false, "", "true", 8, false, "", ""]] remoteExec ["addAction", 0, _firstTime];
-[_controller, [_resetText, {
+/*[_controller, [_resetText, {
 	[(_this select 0), ""] remoteExec ["wsot_fnc_artilleryController", 2, false];
-}, nil, 1, true, false, "", "true", 8, false, "", ""]] remoteExec ["addAction", 0, _firstTime];
+}, nil, 1, true, false, "", "true", 8, false, "", ""]] remoteExec ["addAction", 0, _firstTime];*/
 
 [_controller, [_dividerText, {}, nil, 1, true, false, "", "true", 8, false, "", ""]] remoteExec ["addAction", 0, _firstTime];
 

@@ -24,7 +24,8 @@ _loadouts = missionNamespace getVariable ["wsot_loadouts", []];
 	_action = [_name, _name, "", {
 		params ["_target", "_player", "_params"];
 		_player setUnitLoadout (_params select 0);
-	}, {true}, {}, [_loadout]] call ace_interact_menu_fnc_createAction;
+		if ((_params select 1) != "Pilóta") then { _player linkItem "ACE_NVG_Wide_Black" };
+	}, {true}, {}, [_loadout, _type]] call ace_interact_menu_fnc_createAction;
 	{
 		[_x, 0, ["ACE_MainActions", "loadouts", _type], _action] call ace_interact_menu_fnc_addActionToObject;
 	} forEach _controllers;

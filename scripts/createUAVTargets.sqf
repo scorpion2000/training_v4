@@ -31,7 +31,9 @@ while { true } do {
 				if (isNull _object) then {systemChat "ERROR: Object Was Not Set On UAV!"};
 				_object setVariable ["thisUAV", objNull];
 			}];
+		} else {
+			(_x getVariable ["thisUAV", objNull]) setFuel 1;
 		};
 	} forEach _positionObjects;
-	sleep 20;
+	sleep 30;
 };

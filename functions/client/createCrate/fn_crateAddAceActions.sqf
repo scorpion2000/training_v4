@@ -17,8 +17,9 @@ params ["_controllers"];
 			_position = missionNamespace getVariable [[(_target getVariable ["controlGroup", ""]),"spawnPoint"] joinString "_", []];
 			_prevCrate = _target getVariable ["prevCrate", objNull];
 			if !(isNull _prevCrate) then {
-				if (_prevCrate distance (getPos _position) < 3) then {
+				if (_prevCrate distance _position < 3) then {
 					deleteVehicle _prevCrate;
+					systemChat "WARNING: Too close to previous crate! Deleting previous crate...";
 				};
 			};
 
