@@ -328,3 +328,8 @@ wsot_toggleUAV = [
 	"UAV Célpontok Kapcsolása",
 	"Toggle UAV Targets"
 ];
+
+wsot_movingTargetToggle = [
+	"Mozgó Célpont Kapcsolása",
+	"Toggle Moving Targets"
+];

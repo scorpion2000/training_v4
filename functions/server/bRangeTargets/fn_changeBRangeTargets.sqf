@@ -24,3 +24,4 @@ if (_categoryF) then {
 
 wsot_bRangeForceRedeploy = true;
 [_controller] remoteExec ["wsot_fnc_bRangeController", 2, false];
+[] remoteExec ["wsot_fnc_createVehicleTargets", 2, false];

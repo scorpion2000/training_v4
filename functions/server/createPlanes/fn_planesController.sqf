@@ -18,9 +18,9 @@ _useAceText = format ["<t color='#ff5733'>%1</t>", (wsot_useAceMenu select wsot_
 _deletePlaneText = format ["<t color='#eb4034'>%1</t>", (wsot_planesDeletePlane select wsot_preferedLanguage)];
 
 [_controller, [_welcomeText, {}, nil, 1, true, false, "", "true", 8, false, "", ""]] remoteExec ["addAction", 0, _firstTime];
-[_controller, [_resetText, {
-	[(_this select 0), ""] remoteExec ["wsot_fnc_helicopterController", 2, false];
-}, nil, 1, true, false, "", "true", 8, false, "", ""]] remoteExec ["addAction", 0, _firstTime];
+/*[_controller, [_resetText, {
+	[(_this select 0), ""] remoteExec ["wsot_fnc_planesController", 2, false];
+}, nil, 1, true, false, "", "true", 8, false, "", ""]] remoteExec ["addAction", 0, _firstTime];*/
 
 [_controller, [_dividerText, {}, nil, 1, true, false, "", "true", 8, false, "", ""]] remoteExec ["addAction", 0, _firstTime];
 

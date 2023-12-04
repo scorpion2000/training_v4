@@ -2,11 +2,11 @@
 /*	NOTE: FACTION NAME MUST MATCH FILE NAME	*/
 
 wsot_allFactionsArray = [
-	"nato",
-	"csat",
+	//"spain",
 	"usa",
 	"russia",
-	"spain"
+	"nato",
+	"csat"
 ];
 
 publicVariable "wsot_allFactionsArray";

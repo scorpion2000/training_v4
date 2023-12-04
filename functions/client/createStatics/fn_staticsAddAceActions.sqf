@@ -29,10 +29,15 @@ _faction = "";
 				_target setVariable ["prevStatic", _vehicle, true];
 
 				//_static setVariable ["thisOwner", (owner _player), true];
+				[_vehicle, _player] call wsot_fnc_setBullshitId;
 				[_static, _player] remoteExec ["wsot_fnc_assignOwnerId", 2, false];
 				_allVehicles = _player getVariable ["enteredVehicles", []];
 				_allVehicles pushBack _static;
 				_player setVariable ["enteredVehicles", _allVehicles, true];
+				_vehicle addEventHandler ["Killed", {
+					params ["_unit", "_killer", "_instigator", "_useEffects"];
+					[_unit] remoteExec ["wsot_fnc_delayedRemoval", 2, false];
+				}];
 			}, {true}, {}, [_className]] call ace_interact_menu_fnc_createAction;
 			{
 				[_x, 0, ["ACE_MainActions", _faction], _action] call ace_interact_menu_fnc_addActionToObject;

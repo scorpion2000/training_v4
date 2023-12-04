@@ -53,12 +53,13 @@ _helicopterControllers = [
 	hr1_c_1,
 	hr1_c_2,
 	hr1_c_3,
-	hr1_c_4,
+	//hr1_c_4,	//Deleted
 	hr1_c_5,
 	hr2_c_1,
 	hr2_c_2,
 	hr2_c_3,
-	hr2_c_4
+	hr2_c_4,
+	hr3_c_1
 ];
 
 [_helicopterControllers] call wsot_fnc_helicoptersAddAceActions;
@@ -98,6 +99,9 @@ _tpPoles = missionNamespace getVariable ["tpPoles", []];
 
 _rcPoles = missionNamespace getVariable ["rcPoles", []];
 [_rcPoles] call wsot_fnc_tpPoleCreateActions;
+
+_artPoles = missionNamespace getVariable ["artPoles", []];
+[_artPoles] call wsot_fnc_tpPoleCreateActions;
 
 //I think the script gets stuck here, need to investigate
 _boatControllers = missionNamespace getVariable ["bControllers", []];

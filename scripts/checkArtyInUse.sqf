@@ -7,13 +7,13 @@ while { true } do {
 	{
 		if (_x inArea arty_inUse_t) then {
 			if !(_artyInUse) then {
-				[0.4, _message] remoteExec ["wsot_fnc_changeArtyMarkers", 0, false];
+				[0.4, _message] remoteExec ["wsot_fnc_changeArtyMarkers", clientOwner, false];
 			};
 			_artyInUse = true;
 			break;
 		};
 
-		if (_artyInUse) then {[0.05, _message] remoteExec ["wsot_fnc_changeArtyMarkers", 0, false]};
+		if (_artyInUse) then {[0.05, ""] remoteExec ["wsot_fnc_changeArtyMarkers", clientOwner, false]};
 		_artyInUse = false;
 	} foreach allPlayers;
 	sleep 5;

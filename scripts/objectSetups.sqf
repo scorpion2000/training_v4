@@ -68,6 +68,7 @@
 [objective_t_foxtrot, "objective_foxtrot"] remoteExec ["wsot_fnc_objectiveTriggerSetup", 2, false];
 [objective_t_golf, "objective_golf"] remoteExec ["wsot_fnc_objectiveTriggerSetup", 2, false];
 [objective_t_hotel, "objective_hotel"] remoteExec ["wsot_fnc_objectiveTriggerSetup", 2, false];
+[objective_t_trench, "objective_trench"] remoteExec ["wsot_fnc_objectiveTriggerSetup", 2, false];
 [brief_i_alpha, "objective_alpha", true] remoteExec ["wsot_fnc_objectiveInstructor", 2, false];
 [brief_i_bravo, "objective_bravo", true] remoteExec ["wsot_fnc_objectiveInstructor", 2, false];
 [brief_i_charlie, "objective_charlie", true] remoteExec ["wsot_fnc_objectiveInstructor", 2, false];
@@ -195,6 +196,7 @@
 
 [hr_t_1, "hr1"] remoteExec ["wsot_fnc_helicopterTriggerSetup", 2, false];
 [hr_t_2, "hr2"] remoteExec ["wsot_fnc_helicopterTriggerSetup", 2, false];
+[hr_t_3, "hr3"] remoteExec ["wsot_fnc_helicopterTriggerSetup", 2, false];
 
 [drr1_c, "drr1", true] remoteExec ["wsot_fnc_eodController", 2, false];
 [drr1_T, "drr1"] remoteExec ["wsot_fnc_eodTriggerSetup", 2, false];

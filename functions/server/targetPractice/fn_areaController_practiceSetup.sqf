@@ -2,8 +2,8 @@ params ["_controller"];
 
 [_controller] remoteExec ["removeAllActions", 0, false];
 
-_controller setVariable ["wsot_practiceTargets", 1];
-_controller setVariable ["wsot_practiceTimer", 30];
+_controller setVariable ["wsot_practiceTargets", 6, true];
+_controller setVariable ["wsot_practiceTimer", 40, true];
 
 _welcomeText = format ["<t color='#f4c430'>%1</t>", (wsot_controllerTargetPracticeSetup select wsot_preferedLanguage)];
 _dividerText = wsot_controllerDivider select wsot_preferedLanguage;
@@ -54,4 +54,4 @@ _exitText = format ["<t color='#20c781'>%1</t>", (wsot_rangeExit select wsot_pre
 
 [_controller, [_exitText, {
 	[(_this select 0), ""] remoteExec ["wsot_fnc_areaControllerSetup", 2, false];
-}, nil, 1, true, false, "", "true", 8, false, "", ""]] remoteExec ["addAction", 0, _firstTime];
+}, nil, 1, true, false, "", "true", 8, false, "", ""]] remoteExec ["addAction", 0, false];

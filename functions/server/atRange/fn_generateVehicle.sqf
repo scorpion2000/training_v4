@@ -40,3 +40,12 @@ if (_trigger getVariable ["fixedToggle", false]) then {
 
 _allVehicles pushBack _vehicle;
 _trigger setVariable ["allVehicles", _allVehicles];
+
+if (_trigger getVariable ["movingToggle", false]) then {
+	[_vehicle, _trigger] call wsot_fnc_movingTargetSetup;
+};
+
+_vehicle addEventHandler ["Killed", {
+		params ["_unit", "_killer", "_instigator", "_useEffects"];
+		[_unit, 30] remoteExec ["wsot_fnc_delayedRemoval", 2, false];
+	}];

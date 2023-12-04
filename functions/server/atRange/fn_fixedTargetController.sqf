@@ -26,9 +26,6 @@ _negRot30Text = format ["<t color='#d61344'>%1</t>", (wsot_atFixedRotateNeg30 se
 _virtualiseText = format ["<t color='#f4c430'>%1</t>", (wsot_atFixedVirtualise select wsot_preferedLanguage)];
 
 [_controller, [_welcomeText, {}, nil, 1, true, false, "", "true", 8, false, "", ""]] remoteExec ["addAction", 0, _firstTime];
-[_controller, [_resetText, {
-	[(_this select 0), ""] remoteExec ["wsot_fnc_fixedTargetController", 2, false];
-}, nil, 1, true, false, "", "true", 8, false, "", ""]] remoteExec ["addAction", 0, _firstTime];
 
 [_controller, [_dividerText, {}, nil, 1, true, false, "", "true", 8, false, "", ""]] remoteExec ["addAction", 0, _firstTime];
 

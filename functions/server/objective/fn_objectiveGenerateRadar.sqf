@@ -16,6 +16,7 @@ for "_i" from 1 to 3 do {
 	while {count _pos == 0} do {
 		_rndPos = selectRandom _spawnPositions;
 		_pos = _rndPos findEmptyPosition [0,1,"rhsgref_serhat_radar"];
+		systemChat str _rndPos;
 	};
 
 	_radar = createVehicle ["rhsgref_serhat_radar", _pos, [], 0, "CAN_COLLIDE"];

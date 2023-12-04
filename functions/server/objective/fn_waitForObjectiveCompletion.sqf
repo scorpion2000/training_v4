@@ -1,5 +1,7 @@
 params ["_objects", "_objectiveType", "_trigger"];
 
+systemChat "asd2";
+
 _objectsExist = true;
 _objectiveComplete = false;
 _objectiveID = 1;

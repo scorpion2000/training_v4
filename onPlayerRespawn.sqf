@@ -1,5 +1,5 @@
-params ["_player", "_killer", "_respawnDelay"];
+params ["_newUnit", "_oldUnit", "_respawn", "_respawnDelay"];
 
-_loadout = player getVariable ["respawnLoadout", []];
+_loadout = _oldUnit getVariable ["respawnLoadout", []];
 
 player setUnitLoadout _loadout;

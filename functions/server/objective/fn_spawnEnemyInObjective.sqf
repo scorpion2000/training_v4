@@ -11,9 +11,9 @@ if (isNull _trigger) exitWith {systemChat "humungus fucking error"};
 _specialSpawnChance = 10;
 _unarmedSpawnChance = 1;
 
-_regularsInBuildings = 16;
-_regularsStatic = 8;
-_regularOnPatrol = 6;
+_regularsInBuildings = 18;
+_regularsStatic = 12;
+_regularOnPatrol = 8;
 _specialTryCount = 4;
 _unarmedTryCount = 2;
 

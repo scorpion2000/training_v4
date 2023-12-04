@@ -24,7 +24,13 @@ _loadouts = missionNamespace getVariable ["wsot_loadouts", []];
 	_action = [_name, _name, "", {
 		params ["_target", "_player", "_params"];
 		_player setUnitLoadout (_params select 0);
-	}, {true}, {}, [_loadout]] call ace_interact_menu_fnc_createAction;
+		_player setVariable ["ace_medical_medicclass", 0, true];
+		_player setVariable ["ACE_isEOD", false];
+		if ((_params select 1) != "Pilóta") then { _player linkItem "ACE_NVG_Wide_Black" };
+		if ((_params select 2) == "Szanitéc") then { _player setVariable ["ace_medical_medicclass", 1, true]; };
+		if ((_params select 2) == "Hadorvos") then { _player setVariable ["ace_medical_medicclass", 2, true]; };
+		if ((_params select 1) == "EOD") then { _player setVariable ["ACE_isEOD", true]; };
+	}, {true}, {}, [_loadout, _type, _name]] call ace_interact_menu_fnc_createAction;
 	{
 		[_x, 0, ["ACE_MainActions", "loadouts", _type], _action] call ace_interact_menu_fnc_addActionToObject;
 	} forEach _controllers;

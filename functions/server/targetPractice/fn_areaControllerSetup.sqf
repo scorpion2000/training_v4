@@ -19,6 +19,15 @@ if (_controlGroup != "") then {
 	_controlGroup = _controller getVariable ["controlGroup", "ERROR"];
 };
 
+if (_firstTime) then
+{
+	_object = [_controlGroup, "sb"] joinString "_";
+	[
+		missionNamespace getVariable [_object, objNull],
+		_controlGroup
+	] call wsot_fnc_updateScoreBillboard;
+};
+
 _welcomeText = format ["<t color='#f4c430'>%1 %2</t>", _controlGroup, (wsot_controllerWelcome select wsot_preferedLanguage)];
 _resetText = format ["<t color='#eb4034'>%1</t>", (wsot_reset select wsot_preferedLanguage)];
 _dividerText = wsot_controllerDivider select wsot_preferedLanguage;
@@ -27,9 +36,9 @@ _targetResetText = format ["<t color='#ff5733'>%1</t>", (wsot_controllerResetTar
 _targetPracticeSetup = format ["<t color='#20c781'>%1</t>", (wsot_controllerTargetPracticeSetup select wsot_preferedLanguage)];
 
 [_controller, [_welcomeText, {}, nil, 1, true, false, "", "true", 8, false, "", ""]] remoteExec ["addAction", 0, _firstTime];
-[_controller, [_resetText, {
+/*[_controller, [_resetText, {
 	[(_this select 0), ""] remoteExec ["wsot_fnc_areaControllerSetup", 2, false];
-}, nil, 1, true, false, "", "true", 8, false, "", ""]] remoteExec ["addAction", 0, _firstTime];
+}, nil, 1, true, false, "", "true", 8, false, "", ""]] remoteExec ["addAction", 0, _firstTime];*/
 
 [_controller, [_dividerText, {}, nil, 1, true, false, "", "true", 8, false, "", ""]] remoteExec ["addAction", 0, _firstTime];
 

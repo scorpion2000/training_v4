@@ -10,6 +10,10 @@ class WSOTFunctions {
 		class toggleAirPractice;
 		class toggleAirPracticeController;
 		class assignOwnerId;
+		class scorePersistance;
+		class switchAdminScreens;
+		class createUAVTargets;
+		class delayedRemoval;
 	};
 
 	class WSOT_ClientUtils
@@ -18,6 +22,7 @@ class WSOTFunctions {
 
 		class changeArtyMarkers;
 		class welcomeMessage;
+		class setBullshitId;
 	};
 
 	class WSOT_Server_TargetPractice
@@ -77,6 +82,9 @@ class WSOTFunctions {
 		class fixedTargetRegisterVirt;
 		class fixedTargetToggle;
 		class fixedTargetVirtualisation;
+		class movingTargetController;
+		class movingTargetToggle;
+		class movingTargetSetup;
 	};
 
 	class WSOT_Server_CreateStatics
@@ -264,5 +272,6 @@ class WSOTFunctions {
 
 		class changeBRangeTargets;
 		class bRangeController;
+		class createVehicleTargets;
 	};
 };

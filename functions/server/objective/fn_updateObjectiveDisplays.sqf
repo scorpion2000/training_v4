@@ -1,5 +1,7 @@
 params ["_status", "_trigger"];
 
+systemChat "asd";
+
 _type = _trigger getVariable ["objectiveType", ""];
 systemChat str _type;
 if (_type == "") exitWith {systemChat str "ERROR: Tried Updating Displays Without Objectives"};

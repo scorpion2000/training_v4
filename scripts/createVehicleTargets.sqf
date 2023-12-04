@@ -12,7 +12,9 @@ wsot_bRangeReportDelay = 0;
 wsot_allFactionsBRange = +wsot_allFactionsArray;
 wsot_allTypesBRange = ["car", "carNavy", "truck", "apc", "ifv", "artillery", "tank", "antiTank", "antiAir"];
 
-while { true } do {
+[] call wsot_fnc_createVehicleTargets;
+
+/*while { true } do {
 	_allVehicles = missionNamespace getVariable ["wsot_bRangeVehicles", []];
 
 	if !(wsot_vehicleTargets) then { {deleteVehicle _x} forEach _allVehicles; sleep 20; continue; };
@@ -60,4 +62,4 @@ while { true } do {
 
 	missionNamespace setVariable ["wsot_bRangeVehicles", _allVehicles];
 	sleep 20;
-};
+};*/
