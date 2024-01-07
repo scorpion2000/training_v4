@@ -46,6 +46,6 @@ if (_trigger getVariable ["movingToggle", false]) then {
 };
 
 _vehicle addEventHandler ["Killed", {
-		params ["_unit", "_killer", "_instigator", "_useEffects"];
-		[_unit, 30] remoteExec ["wsot_fnc_delayedRemoval", 2, false];
-	}];
+	params ["_unit", "_killer", "_instigator", "_useEffects"];
+	[_unit, 30] remoteExec ["wsot_fnc_delayedRemoval", 2, false];
+}];

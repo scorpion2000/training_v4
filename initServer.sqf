@@ -10,6 +10,7 @@ publicVariable "ACE_maxWeightCarry";	//Don't ask why
 //[] execVM "scripts\createUAVTargets.sqf";
 [] execVM "scripts\createVehicleTargets.sqf";
 [] execVM "scripts\checkArtyInUse.sqf";
+[cmTreeLoc] execVM "scripts\christmasTree.sqf";
 //[] execVM "scripts\checkAdminLogon.sqf";
 
 [(selectRandom ["clear", "cloudy", "rainy", "stormy"])] call wsot_fnc_changeWeather;

@@ -16,6 +16,16 @@ class WSOTFunctions {
 		class delayedRemoval;
 	};
 
+	class christmas
+	{
+		file = "functions\client\christmas";
+
+		class lerp;
+		class imageSpawn;
+		class processImages;
+		class rotateTexture;
+	}
+
 	class WSOT_ClientUtils
 	{
 		file = "functions\client";
